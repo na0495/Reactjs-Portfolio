@@ -6,18 +6,21 @@ import {
   Link,
   IconButton,
   Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
+  useColorMode,
   useDisclosure,
   useColorModeValue,
   Stack,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
+import { FiSun } from 'react-icons/fi';
+import { FaMoon } from 'react-icons/fa';
 
 const Links = ['Dashboard', 'Projects', 'Team'];
+const iconProps = {
+    variant: 'ghost',
+    size: 'lg',
+    isRound: true
+  };
 
 const NavLink = ({ children }) => (
   <Link
@@ -33,8 +36,9 @@ const NavLink = ({ children }) => (
   </Link>
 );
 
-export default function withAction() {
+export default function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <>
@@ -65,28 +69,23 @@ export default function withAction() {
               size={'sm'}
               mr={4}
               leftIcon={<AddIcon />}>
-              Action
+              More Details
             </Button>
-            <Menu>
-              <MenuButton
-                as={Button}
-                rounded={'full'}
-                variant={'link'}
-                cursor={'pointer'}>
-                <Avatar
-                  size={'sm'}
-                  src={
-                    'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
-                  }
+            <Box
+              mt={{ sm: 3, md: 0 }}
+              position={{ sm: 'absolute', md: 'unset' }}
+              // top="1.5rem"
+              right="5.5rem"
+            >
+                <IconButton
+                aria-label="Color Mode"
+                icon={colorMode === 'light' ? <FaMoon /> : <FiSun />}
+                onClick={toggleColorMode}
+                size="lg"
+                isRound={true}
+                {...iconProps}
                 />
-              </MenuButton>
-              <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
-              </MenuList>
-            </Menu>
+            </Box>
           </Flex>
         </Flex>
 

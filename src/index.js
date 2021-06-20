@@ -17,7 +17,7 @@ const newTheme = {
 };
 
 ReactDOM.render(
-  <ChakraProvider theme={newTheme}>
+  <ChakraProvider>
     <CSSReset />
     <App />
   </ChakraProvider>,
