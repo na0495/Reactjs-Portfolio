@@ -16,7 +16,7 @@ import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 import { FiSun } from 'react-icons/fi';
 import { FaMoon } from 'react-icons/fa';
 
-const Links = ['Dashboard', 'Projects', 'Team'];
+const Links = ['Landing', 'Projects', 'About me', 'My CV', 'Stats'];
 const iconProps = {
     variant: 'ghost',
     size: 'lg',
