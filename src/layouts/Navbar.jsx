@@ -1,9 +1,10 @@
 import {
   Box,
   Flex,
-  Avatar,
+//   Avatar,
   HStack,
   Link,
+//   Heading,
   IconButton,
   Button,
   useColorMode,
@@ -52,7 +53,14 @@ export default function NavBar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Logo</Box>
+              <Box>Logo</Box>
+            {/* <Heading as="h1" size="lg" letterSpacing={'-.1rem'}>
+                <Avatar
+                name="Mrabet Saad"
+                // size="sm"
+                src={'url(../../assets/giphy.gif'}
+                />
+            </Heading> */}
             <HStack
               as={'nav'}
               spacing={4}

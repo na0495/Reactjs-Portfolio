@@ -13,11 +13,11 @@ breakpoints.xl = breakpoints[3];
 
 const newTheme = {
   ...customTheme,
-  breakpoints
+  // breakpoints
 };
 
 ReactDOM.render(
-  <ChakraProvider>
+  <ChakraProvider theme={newTheme}>
     <CSSReset />
     <App />
   </ChakraProvider>,
