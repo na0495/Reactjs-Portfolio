@@ -90,7 +90,6 @@ export default function NavBar() {
             </Button> */}
             <Box
               variant={'solid'}
-              colorScheme={'teal'}
               size={'sm'}
               mr={4}
               // mt={{ sm: 3, md: 0 }}
