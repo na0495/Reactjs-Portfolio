@@ -1,18 +1,18 @@
 import {
   Box,
   Flex,
-  Avatar,
+//   Avatar,
   HStack,
   Link,
-  Heading,
+//   Heading,
   IconButton,
-  Button,
+  // Button,
   useColorMode,
   useDisclosure,
   useColorModeValue,
   Stack,
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { FiSun } from 'react-icons/fi';
 import { makeStyles } from '@material-ui/core/styles';
 import { FaMoon } from 'react-icons/fa';
@@ -21,10 +21,6 @@ const useStyles = makeStyles({
   link: {
     fontWeight: 'bold',
   },
-  logo: {
-    fontWeight: 'bold',
-    fontSize: 30
-  }
 });
 
 const Links = ['Landing', 'Projects', 'About me', 'My CV', 'Stats'];
@@ -65,14 +61,14 @@ export default function NavBar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-              {/* <Box className={classes.logo}>na0495</Box> */}
-            <Heading as="h1" size="lg" letterSpacing={'-.1rem'}>
+              <Box>Logo</Box>
+            {/* <Heading as="h1" size="lg" letterSpacing={'-.1rem'}>
                 <Avatar
                 name="Mrabet Saad"
                 // size="sm"
-                src={'url(/assets/profile.png'}
+                src={'url(../../assets/giphy.gif'}
                 />
-            </Heading>
+            </Heading> */}
             <HStack
               className={classes.link}
               as={'nav'}
@@ -83,14 +79,26 @@ export default function NavBar() {
               ))}
             </HStack>
           </HStack>
-          
           <Flex alignItems={'center'}>
+            {/* <Button
+              variant={'solid'}
+              colorScheme={'teal'}
+              size={'sm'}
+              mr={4}
+              leftIcon={<AddIcon />}>
+              More Details
+            </Button> */}
             <Box
-              px={3}
-              mt={{ sm: 3, md: 0 }}
-              position={{ sm: 'absolute', md: 'unset' }}
-              // top="1.5rem"
-              right="5.5rem"
+              variant={'solid'}
+              colorScheme={'teal'}
+              size={'sm'}
+              mr={4}
+              // mt={{ sm: 3, md: 0 }}
+              // mr={4}
+              // variant={'solid'}
+              // position={{ sm: 'absolute', md: 'unset' }}
+              // // top="1.5rem"
+              // // right="5.5rem"
             >
                 <IconButton
                 aria-label="Color Mode"
@@ -101,16 +109,9 @@ export default function NavBar() {
                 {...iconProps}
                 />
             </Box>
-            <Button
-              variant={'solid'}
-              colorScheme={'teal'}
-              size={'sm'}
-              mr={4}
-              leftIcon={<AddIcon />}>
-              More Details
-            </Button>
           </Flex>
         </Flex>
+
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
