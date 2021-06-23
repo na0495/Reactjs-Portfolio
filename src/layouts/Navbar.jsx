@@ -1,10 +1,10 @@
 import {
   Box,
   Flex,
-//   Avatar,
+  Avatar,
   HStack,
   Link,
-//   Heading,
+  Heading,
   IconButton,
   Button,
   useColorMode,
@@ -14,7 +14,18 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 import { FiSun } from 'react-icons/fi';
+import { makeStyles } from '@material-ui/core/styles';
 import { FaMoon } from 'react-icons/fa';
+
+const useStyles = makeStyles({
+  link: {
+    fontWeight: 'bold',
+  },
+  logo: {
+    fontWeight: 'bold',
+    fontSize: 30
+  }
+});
 
 const Links = ['Landing', 'Projects', 'About me', 'My CV', 'Stats'];
 const iconProps = {
@@ -25,12 +36,12 @@ const iconProps = {
 
 const NavLink = ({ children }) => (
   <Link
-    px={2}
-    py={1}
+    px={3}
+    py={2}
     rounded={'md'}
     _hover={{
       textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
+      bg: useColorModeValue('gray.300', 'gray.700'),
     }}
     href={'#'}>
     {children}
@@ -40,6 +51,7 @@ const NavLink = ({ children }) => (
 export default function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
+  const classes = useStyles();
 
   return (
     <>
@@ -53,15 +65,16 @@ export default function NavBar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-              <Box>Logo</Box>
-            {/* <Heading as="h1" size="lg" letterSpacing={'-.1rem'}>
+              {/* <Box className={classes.logo}>na0495</Box> */}
+            <Heading as="h1" size="lg" letterSpacing={'-.1rem'}>
                 <Avatar
                 name="Mrabet Saad"
                 // size="sm"
-                src={'url(../../assets/giphy.gif'}
+                src={'url(/assets/profile.png'}
                 />
-            </Heading> */}
+            </Heading>
             <HStack
+              className={classes.link}
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
@@ -70,16 +83,10 @@ export default function NavBar() {
               ))}
             </HStack>
           </HStack>
+          
           <Flex alignItems={'center'}>
-            <Button
-              variant={'solid'}
-              colorScheme={'teal'}
-              size={'sm'}
-              mr={4}
-              leftIcon={<AddIcon />}>
-              More Details
-            </Button>
             <Box
+              px={3}
               mt={{ sm: 3, md: 0 }}
               position={{ sm: 'absolute', md: 'unset' }}
               // top="1.5rem"
@@ -94,9 +101,16 @@ export default function NavBar() {
                 {...iconProps}
                 />
             </Box>
+            <Button
+              variant={'solid'}
+              colorScheme={'teal'}
+              size={'sm'}
+              mr={4}
+              leftIcon={<AddIcon />}>
+              More Details
+            </Button>
           </Flex>
         </Flex>
-
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
