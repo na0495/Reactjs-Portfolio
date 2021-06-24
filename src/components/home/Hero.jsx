@@ -9,9 +9,8 @@ import Fade from '../Animation/Fade';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    // flexGrow: 1,
     padding: theme.spacing(5),
-    margin: theme.spacing(5),
 
   },
   hero: {
@@ -24,10 +23,11 @@ const useStyles = makeStyles((theme) => ({
     // position: 'absolute',
   },
   secondary: {
+    paddingTop: theme.spacing(5),
+    paddingLeft: theme.spacing(1),
     // padding: theme.spacing(2),
     // marginTop: 25,
-    marginBottom: 100,
-    textAlign: '45%',
+    // textAlign: '45%',
   },
 
   waveOne: {
@@ -88,7 +88,7 @@ export default function Home() {
             <motion.div className={classes.item}drag dragConstraints={constraintsRef} />
           </motion.div>
         </Grid> */}
-        <Grid item sx={12} sm={8} >
+        <Grid item sx={8} sm={8} >
           <Fade/>
           <AnimatePresence>
             <motion.div
@@ -115,9 +115,11 @@ export default function Home() {
             </motion.div> 
           </AnimatePresence>
           <AnimatePresence>
-            <motion.div animate={{ x: 50 }} transition={{ ease: "easeOut", duration: 3 }} >
+            <motion.div animate={{ y: -50 }} transition={{ ease: "easeOut", duration: 3 }} >
               <Heading as="h3" size="lg" className={classes.secondary}>
-                  A Software Developer
+                  A Software Developer, starting his <br/>
+                  journey in the vast universe <br/>
+                  of programming.
               </Heading>
             </motion.div>
           </AnimatePresence>
