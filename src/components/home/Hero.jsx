@@ -10,6 +10,9 @@ import Fade from '../Animation/Fade';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    padding: theme.spacing(5),
+    margin: theme.spacing(5),
+
   },
   hero: {
     padding: theme.spacing(1),
@@ -68,7 +71,7 @@ export default function Home() {
 
   return (
     <>
-      <Grid container>
+      <Grid container className={classes.root}>
       {/* <Wave
         className={classes.waveOne}
         fill="#90CDF4"
@@ -101,7 +104,7 @@ export default function Home() {
                     visible: i => ({
                       y: 0,
                       transition: {
-                        delay: i * 0.3
+                        delay: i * 0.5
                       }
                     })
                   }}
