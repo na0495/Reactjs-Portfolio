@@ -16,7 +16,7 @@ function Box() {
 
 export default function Experience() {
     return (
-      <div className="App">
+      <div>
         <p style={{ color: "white", padding: 10 }}>Scroll down</p>
         <FadeInWhenVisible>
           <Box />
