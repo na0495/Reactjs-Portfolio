@@ -5,12 +5,13 @@ import reportWebVitals from './reportWebVitals';
 import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import customTheme from './theme/theme';
 
+// eslint-disable-next-line
 const newTheme = {
   ...customTheme,
 };
 
 ReactDOM.render(
-  <ChakraProvider theme={newTheme}>
+  <ChakraProvider>
     <CSSReset />
     <App />
   </ChakraProvider>,

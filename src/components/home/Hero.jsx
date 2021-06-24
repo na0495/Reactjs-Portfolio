@@ -1,10 +1,11 @@
 import * as React from "react";
 import { AnimatePresence, motion } from 'framer-motion'
 import { Heading } from "@chakra-ui/react"
-import Wave from "react-wavify";
+// import Wave from "react-wavify";
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { SplitText } from '../Animation/SplitText';
+import Fade from '../Animation/Fade';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -68,7 +69,7 @@ export default function Home() {
   return (
     <>
       <Grid container>
-      <Wave
+      {/* <Wave
         className={classes.waveOne}
         fill="#90CDF4"
         paused={false}
@@ -78,13 +79,14 @@ export default function Home() {
           speed: 0.1,
           points: 5
         }}
-      />
+      /> */}
         {/* <Grid item sx={12} sm={4}>
           <motion.div className={classes.container} ref={constraintsRef}>
             <motion.div className={classes.item}drag dragConstraints={constraintsRef} />
           </motion.div>
         </Grid> */}
         <Grid item sx={12} sm={8} >
+          <Fade/>
           <AnimatePresence>
             <motion.div
               initial={{ opacity: 1 }}
@@ -104,7 +106,7 @@ export default function Home() {
                     })
                   }}
                   >
-                  Hi, I'm Mrabet saad
+                  I'm Mrabet saad
                 </SplitText>
               </Heading>
             </motion.div> 

@@ -61,7 +61,7 @@ export default function NavBar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-              <Box>Logo</Box>
+              {/* <Box>NA</Box> */}
             {/* <Heading as="h1" size="lg" letterSpacing={'-.1rem'}>
                 <Avatar
                 name="Mrabet Saad"
