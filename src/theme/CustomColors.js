@@ -2,18 +2,18 @@ const customColors = {
   transparent: 'transparent',
   black: '#000',
   white: '#fff',
-  gray: {
-    50: '#F6FAFF',
-    100: '#EFF2FB',
-    200: '#D9E2EC',
-    300: '#BCCCDC',
-    400: '#9FB3C8',
-    500: '#829AB1',
-    600: '#486581',
-    700: '#334E68',
-    800: '#243B53',
-    900: '#102a43'
-  },
+  // gray: {
+  //   50: '#F6FAFF',
+  //   100: '#EFF2FB',
+  //   200: '#D9E2EC',
+  //   300: '#BCCCDC',
+  //   400: '#9FB3C8',
+  //   500: '#829AB1',
+  //   600: '#486581',
+  //   700: '#334E68',
+  //   800: '#243B53',
+  //   900: '#102a43'
+  // },
   primary: {
     50: '#FFE0FF',
     100: '#F8CCFF',
@@ -76,53 +76,12 @@ const customColors = {
   },
   mode: {
     light: {
-      logo: '#102a43',
       background: '#fff',
-      cardBG: '#fff',
-      tagBG: '#EBF8FF',
-      border: '#e2e8f0',
-      profileBG: '#90CDF4',
-      text: '#1a202c',
-      subtext: '#334E68',
-      heading: '#102a43',
-      icon: '#9FB3C8',
-      link: '#9F00FF',
-      career: {
-        tagBG: '#f7fafc',
-        text: '#1a202c',
-        subtext: '#2d3748'
-      },
-      skills: {
-        color: '#4299E1',
-        border: '#4299E1',
-        bg: '#d7e8f3'
-      }
+      card: '#ADB5BD'
     },
     dark: {
-      logo: '#ffffff',
-      profileBG: '#1A202C',
-      // background: "#1A202C",
-      // cardBG: "#2D3748",
       background: 'rgb(16, 42, 67)',
-      cardBG: 'rgb(33 57 82)',
-      tagBG: '#CEEDFF',
-      border: '#718096',
-      text: '#fff',
-      subtext: '#fff',
-      color: '#fff',
-      heading: '#fff',
-      icon: '#486581',
-      link: '#F8CCFF',
-      career: {
-        tagBG: 'rgba(237, 242, 247, 0.16)',
-        text: '#fff',
-        subtext: '#fff'
-      },
-      skills: {
-        color: '#fff',
-        border: '#4299E1',
-        bg: '#427a9e'
-      }
+      card: '#a1887f'
     }
   }
 };

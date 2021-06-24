@@ -1,41 +1,30 @@
 import FadeInWhenVisible from '../Animation/FadeInWhenVisible';
+import { makeStyles } from '@material-ui/core/styles';
+import { Divider, Text, Stack, Container, useColorMode } from "@chakra-ui/react"
 
-function Box() {
-    return (
-      <div
-        style={{
-          padding: 40,
-          background: "white",
-          display: "inline-block",
-          borderRadius: 5
-        }}
-      />
-    );
-  }
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+      padding: 40,
+      textAlign: 'center',
+    },
+    devider: {
+        fontWeight: 40
+
+    }
+  }));
 
 export default function Experience() {
+    const classes = useStyles();
+    const { colorMode } = useColorMode();
     return (
-      <div>
-        <p style={{ color: "white", padding: 10 }}>Scroll down</p>
+      <Container className={classes.root} backgroundColor={`mode.${colorMode}.card`}>
         <FadeInWhenVisible>
-          <Box />
+            <Stack direction="row" h="100px" p={4}>
+                <Divider className={classes.devider} orientation="vertical" />
+                <Text fontSize="2xl">Chakra UI</Text>
+            </Stack>
         </FadeInWhenVisible>
-        <FadeInWhenVisible>
-          <Box />
-        </FadeInWhenVisible>
-        <FadeInWhenVisible>
-          <Box />
-        </FadeInWhenVisible>
-        <FadeInWhenVisible>
-          <Box />
-        </FadeInWhenVisible>
-        <FadeInWhenVisible>
-          <Box />
-        </FadeInWhenVisible>
-        <FadeInWhenVisible>
-          <Box />
-        </FadeInWhenVisible>
-      </div>
+      </Container>
     );
   }
