@@ -5,22 +5,22 @@ export default {
       number: {
         value: 100,
         density: {
-          enable: false,
+          enable: true,
           value_area: 600
         }
       },
       color: {
-        value: '#ffffff'
+        value: '#9e9e9e'
       },
       shape: {
         type: 'circle',
         stroke: {
           width: 2,
-          color: '#0A1931'
+          color: '#bdbdbd'
         }
       },
       opacity: {
-        value: 0.2,
+        value: 0.45,
         random: false,
         anim: {
           enable: false,
@@ -69,7 +69,7 @@ export default {
           mode: 'grab'
         },
         onclick: {
-          enable: true,
+          enable: false,
           mode: 'repulse'
         },
         resize: true

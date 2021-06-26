@@ -12,7 +12,7 @@ function Particles({ children }) {
         params={particlesConfig}
         style={{
           position: 'absolute',
-          zIndex: 1,
+          zIndex: 'auto',
           left: 0,
           right: 0,
           bottom: 0,

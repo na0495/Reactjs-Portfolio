@@ -77,11 +77,13 @@ const customColors = {
   mode: {
     light: {
       background: '#fff',
-      card: '#ADB5BD'
+      card: '#000',
+      cardText: '#fff',
     },
     dark: {
       background: 'rgb(16, 42, 67)',
-      card: '#a1887f'
+      card: '#fff',
+      cardText: '#000',
     }
   }
 };
