@@ -19,7 +19,7 @@ function Feature({ title, desc, ...rest }) {
   )
 }
 
-export default function Experience() {
+export default function AboutMe() {
     const { colorMode } = useColorMode();
     return (
       <FadeInWhenVisible>

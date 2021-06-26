@@ -1,7 +1,7 @@
 const customColors = {
   transparent: 'transparent',
   black: '#000',
-  white: '#fff',
+  white: '#F9F6F0',
   // gray: {
   //   50: '#F6FAFF',
   //   100: '#EFF2FB',
@@ -77,13 +77,13 @@ const customColors = {
   mode: {
     light: {
       background: '#fff',
-      card: '#000',
-      cardText: '#fff',
+      // card: '#000',
+      // cardText: '#fff',
     },
     dark: {
       background: 'rgb(16, 42, 67)',
-      card: '#fff',
-      cardText: '#000',
+      // card: '#fff',
+      // cardText: '#000',
     }
   }
 };

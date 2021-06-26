@@ -4,6 +4,7 @@ import Experience from './components/home/Experience'
 import Footer from './components/home/Footer'
 import ReactParticles from 'react-particles-js';
 import particlesConfig from './components/Animation/particlesBg';
+import AboutMe from './components/home/AboutMe';
 
 function Particles({ children }) {
   return (
@@ -30,6 +31,7 @@ function App() {
       <SwitchMode/>
         <Particles>
           <Hero/>
+          <AboutMe/>
           <Experience/>
         </Particles>
       <Footer/>

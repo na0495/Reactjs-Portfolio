@@ -44,7 +44,7 @@ const SwitchMode = props => {
               src={'url(../../assets/giphy.gif'}
             />
           </Heading>
-        </Flex> */}
+        </Flex> */} 
         <Box
           p={4}
           sx={{ position: '-webkit-sticky', 
