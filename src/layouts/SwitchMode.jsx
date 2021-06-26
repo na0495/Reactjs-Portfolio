@@ -1,9 +1,6 @@
 import React from 'react';
 import {
   Box,
-  Heading,
-  Flex,
-  Avatar,
   IconButton,
   useColorMode,
 } from '@chakra-ui/react';
@@ -17,23 +14,24 @@ const iconProps = {
 };
 
 const SwitchMode = props => {
+
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <>
-      <Flex
+      {/* <Flex
         as="nav"
         align="center"
         justify="space-between"
         wrap="wrap"
         padding="1.5rem"
-        color="#2D3748"
-        marginLeft="auto"
-        marginRight="auto"
-        maxWidth="55rem"
+        // color="#2D3748"
+        // marginLeft="auto"
+        // marginRight="auto"
+        // maxWidth="55rem"
         {...props}
-      >
-        <Flex
+      > */}
+        {/* <Flex
           align="center"
           mr={{ md: '5' }}
           width={{ sm: '100%', md: 'auto' }}
@@ -46,14 +44,19 @@ const SwitchMode = props => {
               src={'url(../../assets/giphy.gif'}
             />
           </Heading>
-        </Flex>
+        </Flex> */}
         <Box
-          mt={{ sm: 3, md: 0 }}
-          position={{ sm: 'absolute', md: 'unset' }}
-          // top="1.5rem"
-          right="5.5rem"
+          p={4}
+          sx={{ position: '-webkit-sticky', 
+          // eslint-disable-next-line
+          position: 'sticky', 
+          top: '0',
+          textAlign: 'right',
+          zIndex: 3,
+         }}
         >
           <IconButton
+            boxShadow="dark-lg"
             aria-label="Color Mode"
             icon={colorMode === 'light' ? <FaMoon /> : <FiSun />}
             onClick={toggleColorMode}
@@ -62,7 +65,7 @@ const SwitchMode = props => {
             {...iconProps}
           />
         </Box>
-      </Flex>
+      {/* </Flex> */}
     </>
   );
 };

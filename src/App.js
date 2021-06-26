@@ -1,4 +1,4 @@
-import Navbar from './layouts/Navbar'
+import SwitchMode from './layouts/SwitchMode'
 import Hero from './components/home/Hero'
 import Experience from './components/home/Experience'
 import Footer from './components/home/Footer'
@@ -27,7 +27,7 @@ function Particles({ children }) {
 function App() {
   return (
     <>
-      <Navbar/>
+      <SwitchMode/>
         <Particles>
           <Hero/>
           <Experience/>
