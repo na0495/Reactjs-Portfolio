@@ -1,7 +1,8 @@
 import Fade from 'react-reveal/Fade';
-import { Heading, Box, Text, Stack, useColorMode, Center } from "@chakra-ui/react"
+// eslint-disable-next-line 
+import { Heading, Box, Text, Stack, useColorMode, Center, Tag, HStack } from "@chakra-ui/react"
 import GitHub from './GitHub'
-  
+
 function Feature({ title, desc, ...rest }) {
   return (
     <Center>
@@ -15,6 +16,13 @@ function Feature({ title, desc, ...rest }) {
         <Box p={5} boxShadow="dark-lg" shadow="md" borderWidth="1px" {...rest} borderRadius="16" >
            <GitHub/>
         </Box>
+        <HStack spacing={4}>
+        {/* {language.map((key) => (
+            <Tag size= key={key} variant="solid" colorScheme={language.color}>
+                {language.name}
+            </Tag>
+        ))} */}
+        </HStack>
       </Box>
     </Center>
   )
