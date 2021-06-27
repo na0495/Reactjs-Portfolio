@@ -5,12 +5,13 @@ import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { SplitText } from '../Animation/SplitText';
 import Fade from '../Animation/Fade';
+import Type from '../Animation/Type';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     // flexGrow: 1,
     padding: theme.spacing(5),
-
+    marginBottom: theme.spacing(20),
   },
   hero: {
     padding: theme.spacing(1),
@@ -80,9 +81,10 @@ export default function Home() {
           <AnimatePresence>
             <motion.div animate={{ y: -50 }} transition={{ ease: "easeOut", duration: 3 }} >
               <Heading as="h3" size="lg" className={classes.secondary}>
-                  A Software Developer, starting his <br/>
+                <Type/>
+                  {/* A Software Developer, starting his <br/>
                   journey in the vast universe <br/>
-                  of programming.
+                  of programming. */}
               </Heading>
             </motion.div>
           </AnimatePresence>

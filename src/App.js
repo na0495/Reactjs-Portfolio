@@ -5,6 +5,7 @@ import Footer from './components/home/Footer'
 import ReactParticles from 'react-particles-js';
 import particlesConfig from './components/Animation/particlesBg';
 import AboutMe from './components/home/AboutMe';
+import GitStats from './components/home/GitStats';
 
 function Particles({ children }) {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Particles>
           <Hero/>
           <AboutMe/>
+          <GitStats/>
           <Experience/>
         </Particles>
       <Footer/>

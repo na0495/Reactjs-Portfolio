@@ -1,4 +1,5 @@
-import FadeInWhenVisible from '../Animation/FadeInWhenVisible';
+// import FadeInWhenVisible from '../Animation/FadeInWhenVisible';
+import Fade from 'react-reveal/Fade';
 import { Heading, Box, Text, Stack, useColorMode, Center, Flex, Avatar } from "@chakra-ui/react"
 import main from '../../assets/main.jpeg'
   
@@ -6,7 +7,6 @@ function Feature({ title, desc, imageUrl, imageAlt, ...rest }) {
   return (
     <Center>
       <Box p={5} boxShadow="dark-lg" shadow="md" borderWidth="1px" w="60%"{...rest} borderRadius="16" >
-
         <Stack direction={["column", "row"]} spacing="24px">
           <Flex>
             <Box w="25%" >
@@ -26,7 +26,7 @@ function Feature({ title, desc, imageUrl, imageAlt, ...rest }) {
 export default function AboutMe() {
     const { colorMode } = useColorMode();
     return (
-      <FadeInWhenVisible>
+      <Fade bottom cascade>
         <Stack spacing={12} p={6}>
           <Feature
             backgroundColor={`mode.${colorMode}.background`}
@@ -38,6 +38,6 @@ export default function AboutMe() {
             imageAlt="Mrabet Saad"
           />
         </Stack>
-      </FadeInWhenVisible>
+      </Fade>
     );
   }
