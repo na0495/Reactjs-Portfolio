@@ -11,10 +11,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     // flexGrow: 1,
     padding: theme.spacing(5),
-    marginBottom: theme.spacing(20),
+    marginBottom: theme.spacing(30),
   },
   hero: {
-    padding: theme.spacing(1),
+    paddingTop: theme.spacing(2),
     // marginTop: theme.spacing(10),
     // textAlign: 'center',
     // color: 'white',
@@ -78,16 +78,16 @@ export default function Home() {
               </Heading>
             </motion.div> 
           </AnimatePresence>
-          <AnimatePresence>
-            <motion.div animate={{ y: -50 }} transition={{ ease: "easeOut", duration: 3 }} >
-              <Heading as="h3" size="lg" className={classes.secondary}>
+          {/* <AnimatePresence>
+            <motion.div animate={{ y: -50 }} transition={{ ease: "easeOut", duration: 3 }} > */}
+              <Heading as="h3" size="lg">
                 <Type/>
                   {/* A Software Developer, starting his <br/>
                   journey in the vast universe <br/>
                   of programming. */}
               </Heading>
-            </motion.div>
-          </AnimatePresence>
+            {/* </motion.div>
+          </AnimatePresence> */}
         </Grid>
       </Grid>
     </>
