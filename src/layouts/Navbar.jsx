@@ -14,8 +14,12 @@ import SwitchMode from './SwitchMode';
 
 const Links = [
 {
-  name: 'About me',
+  name: 'Home',
   path: '/'
+},
+{
+  name: 'About me',
+  path: '/aboutme'
 },
 {
   name: 'Skills',
@@ -32,6 +36,7 @@ const NavLink = ({ name, path }) => (
     py={2}
     as={RouterLink}
     to={path}
+    sx={{ fontWeight: 'bold' }}
     rounded={'md'}
     _hover={{
       textDecoration: 'none',
