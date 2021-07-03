@@ -13,42 +13,48 @@ import {
   Stack,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { Link as RouterLink } from 'react-router-dom';
 // import { FiSun } from 'react-icons/fi';
-import { makeStyles } from '@material-ui/core/styles';
 // import { FaMoon } from 'react-icons/fa';
 import SwitchMode from './SwitchMode';
 
-const useStyles = makeStyles({
-  link: {
-    fontWeight: 'bold',
-  },
-});
-
-const Links = ['About me', 'Skills', 'Resumer'];
+const Links = [
+{
+  name: 'About me',
+  path: '/'
+},
+{
+  name: 'Skills',
+  path: '/skills'
+},
+{
+  name: 'Resumer',
+  path: '/resumer'
+}];
 // const iconProps = {
 //     variant: 'ghost',
 //     size: 'lg',
 //     isRound: true
 //   };
 
-const NavLink = ({ children }) => (
+const NavLink = ({ name, path }) => (
   <Link
     px={3}
     py={2}
+    as={RouterLink}
+    to={path}
     rounded={'md'}
     _hover={{
       textDecoration: 'none',
       bg: useColorModeValue('gray.300', 'gray.700'),
     }}
     href={'#'}>
-    {children}
+    {name}
   </Link>
 );
 
 export default function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  // const { colorMode, toggleColorMode } = useColorMode();
-  const classes = useStyles();
 
   return (
     <>
@@ -71,12 +77,11 @@ export default function NavBar() {
                 />
             </Heading> */}
             <HStack
-              className={classes.link}
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link.name} name={link.name} path={link.path}>{link.name}</NavLink>
               ))}
             </HStack>
           </HStack>
@@ -116,7 +121,7 @@ export default function NavBar() {
           <Box pb={4} display={{ md: 'none' }} >
             <Stack as={'nav'} spacing={4} >
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link.name} name={link.name}  path={link.path}>{link.name}</NavLink>
               ))}
             </Stack>
           </Box>
