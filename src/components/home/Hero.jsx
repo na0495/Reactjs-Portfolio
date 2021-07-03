@@ -9,7 +9,7 @@ import Type from '../Animation/Type';
 export default function Home() {
 
   return (
-    <>
+    <Box p={15} pt={100}>
       <Grid container>
         <Grid item sx={8} sm={8} >
           <Box p={3}>
@@ -44,7 +44,7 @@ export default function Home() {
           </Heading>
         </Grid>
       </Grid>
-    </>
+    </Box>
   );
 }
 

@@ -34,7 +34,7 @@ export default {
         random: true,
         anim: {
           enable: false,
-          speed: 40,
+          speed: 50,
           size_min: 0.1,
           sync: false
         }
@@ -48,7 +48,7 @@ export default {
       },
       move: {
         enable: true,
-        speed: 10,
+        speed: 3,
         direction: 'left',
         random: true,
         straight: true,

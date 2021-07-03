@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from './layouts/Navbar'
 import LandingPage from './components/LandingPage'
+import AboutMe from './components/AboutMe'
 import Skills from './components/Skills'
 import Resumer from './components/Resumer'
 import Footer from './components/home/Footer'
@@ -46,7 +47,7 @@ function App() {
         <Navbar/>
           <Switch>
             <Route exact path="/" component={LandingPage} />
-            <Route exact path="/aboutme" component={LandingPage} />
+            <Route exact path="/aboutme" component={AboutMe} />
             <Route exact path="/skills" component={Skills} />
             <Route exact path="/resume" component={Resumer}/>
           </Switch> 
@@ -55,8 +56,6 @@ function App() {
     </Router>
   );
 }
-
-
 
 export default App;
 
