@@ -1,6 +1,6 @@
 // import SwitchMode from './layouts/SwitchMode'
 import Navbar from './layouts/Navbar'
-import Hero from './components/home/Hero'
+import LandingPage from './components/LandingPage'
 // import Experience from './components/home/Experience'
 import Footer from './components/home/Footer'
 import ReactParticles from 'react-particles-js';
@@ -39,7 +39,7 @@ function App() {
       <Particles>
         <Navbar/>
           <Switch>
-            <Route exact path="/" component={Hero} />
+            <Route exact path="/" component={LandingPage} />
             <Route exact path="/skills" />
             <Route exact path="/resumer" />
           </Switch> 
