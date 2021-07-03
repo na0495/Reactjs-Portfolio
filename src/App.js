@@ -5,6 +5,12 @@ import Hero from './components/home/Hero'
 import Footer from './components/home/Footer'
 import ReactParticles from 'react-particles-js';
 import particlesConfig from './components/Animation/particlesBg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
 // import AboutMe from './components/home/AboutMe';
 // import GitStats from './components/home/GitStats';
 
@@ -29,13 +35,17 @@ function Particles({ children }) {
 
 function App() {
   return (
-    <>
+    <Router>
       <Particles>
-      <Navbar/>
-        <Hero/>
+        <Navbar/>
+          <Switch>
+            <Route exact path="/" component={Hero} />
+            <Route exact path="/skills" />
+            <Route exact path="/resumer" />
+          </Switch> 
+        <Footer/>
       </Particles>
-      <Footer/>
-    </>
+    </Router>
   );
 }
 
