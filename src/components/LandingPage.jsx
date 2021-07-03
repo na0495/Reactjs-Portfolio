@@ -3,15 +3,18 @@ import { Box } from '@chakra-ui/layout';
 import Hero from './home/Hero';
 // import AboutMe from './home/AboutMe';
 import HomeContent from './home/HomeContent';
+import Particles from './Animation/Particles'
 
 export default function LandingPage() {
     return (
         <>
-        <Box>
-           <Hero/>
-           {/* <AboutMe/> */}
-           <HomeContent/>
-        </Box>
+        <Particles>
+            <Box>
+                <Hero/>
+                {/* <AboutMe/> */}
+                <HomeContent/>
+            </Box>
+        </Particles>
         </>
     )
 
