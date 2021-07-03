@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, IconButton, Link } from '@chakra-ui/react';
+import { Stack, IconButton, Link, Heading, Center } from '@chakra-ui/react';
 import siteConfig from '../../configs/site-config';
 
 const iconProps = {
@@ -10,6 +10,7 @@ const iconProps = {
 
 const Footer = props => {
   return (
+    <>
     <Stack
       as="footer"
       isInline
@@ -19,10 +20,12 @@ const Footer = props => {
       alignItems="center"
       {...props}
     >
+
       {siteConfig.author.accounts.map(sc => (
         <IconButton
           as={Link}
           isExternal
+          key={sc.label}
           href={sc.url}
           aria-label={sc.label}
           size="lg"
@@ -31,7 +34,12 @@ const Footer = props => {
           {...iconProps}
         />
       ))}
+            
     </Stack>
+    <Center>
+      <Heading as="h6" size="xs" alignItems="center"> {siteConfig.copyright}</Heading>
+    </Center>
+    </>
   );
 };
 
