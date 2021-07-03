@@ -1,21 +1,15 @@
 import {
   Box,
   Flex,
-//   Avatar,
   HStack,
   Link,
-//   Heading,
   IconButton,
-  // Button,
-  // useColorMode,
   useDisclosure,
   useColorModeValue,
   Stack,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
-// import { FiSun } from 'react-icons/fi';
-// import { FaMoon } from 'react-icons/fa';
 import SwitchMode from './SwitchMode';
 
 const Links = [
@@ -31,11 +25,6 @@ const Links = [
   name: 'Resumer',
   path: '/resumer'
 }];
-// const iconProps = {
-//     variant: 'ghost',
-//     size: 'lg',
-//     isRound: true
-//   };
 
 const NavLink = ({ name, path }) => (
   <Link
@@ -68,14 +57,6 @@ export default function NavBar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-              {/* <Box>NA</Box> */}
-            {/* <Heading as="h1" size="lg" letterSpacing={'-.1rem'}>
-                <Avatar
-                name="Mrabet Saad"
-                // size="sm"
-                src={'url(../../assets/giphy.gif'}
-                />
-            </Heading> */}
             <HStack
               as={'nav'}
               spacing={4}
@@ -86,34 +67,7 @@ export default function NavBar() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-          <SwitchMode/>
-            {/* <Button
-              variant={'solid'}
-              colorScheme={'teal'}
-              size={'sm'}
-              mr={4}
-              leftIcon={<AddIcon />}>
-              More Details
-            </Button> */}
-            {/* <Box
-              variant={'solid'}
-              size={'sm'}
-              mr={4}
-              // mt={{ sm: 3, md: 0 }}
-              // mr={4}
-              // variant={'solid'}
-              // position={{ sm: 'absolute', md: 'unset' }}
-              // // top="1.5rem"
-              // // right="5.5rem"
-            >
-                {/* <IconButton
-                aria-label="Color Mode"
-                icon={colorMode === 'light' ? <FaMoon /> : <FiSun />}
-                onClick={toggleColorMode}
-                size="lg"
-                isRound={true}
-                {...iconProps}
-                /> */}
+            <SwitchMode/>
           </Flex>
         </Flex>
 

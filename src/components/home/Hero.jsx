@@ -1,66 +1,27 @@
 import * as React from "react";
 import { AnimatePresence, motion } from 'framer-motion'
-import { Heading } from "@chakra-ui/react"
+import { Heading, Box } from "@chakra-ui/react"
 import { Grid } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
 import { SplitText } from '../Animation/SplitText';
 import Fade from '../Animation/Fade';
 import Type from '../Animation/Type';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    // flexGrow: 1,
-    padding: theme.spacing(5),
-    marginBottom: theme.spacing(30),
-  },
-  hero: {
-    paddingTop: theme.spacing(2),
-    // marginTop: theme.spacing(10),
-    // textAlign: 'center',
-    // color: 'white',
-    fontWeight: 'bold',
-    // top: 40,
-    // position: 'absolute',
-  },
-  secondary: {
-    paddingTop: theme.spacing(5),
-    paddingLeft: theme.spacing(1),
-    // padding: theme.spacing(2),
-    // marginTop: 25,
-    // textAlign: '45%',
-  },
-
-  waveOne: {
-    transform: 'rotate(180deg)',
-    // left: 0,
-    // height: 400,
-    zIndex: 5
-    // margin: -15,
-  },
-  waveTwo: {
-    // transform: 'rotate(180deg)',
-    // left: 0,
-    // height: 400,
-    zIndex: 5
-    // margin: -15,
-  },
-}));
-
 export default function Home() {
-  const classes = useStyles();
 
   return (
     <>
-      <Grid container className={classes.root}>
+      <Grid container>
         <Grid item sx={8} sm={8} >
-          <Fade/>
+          <Box p={3}>
+            <Fade/>
+          </Box>
           <AnimatePresence>
             <motion.div
               initial={{ opacity: 1 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <Heading as="h2" size="2xl" isTruncated className={classes.hero}>
+              <Heading as="h2" size="2xl" isTruncated p={2}>
                 <SplitText
                   initial={{ y: '100%' }}
                   animate="visible"
@@ -78,16 +39,9 @@ export default function Home() {
               </Heading>
             </motion.div> 
           </AnimatePresence>
-          {/* <AnimatePresence>
-            <motion.div animate={{ y: -50 }} transition={{ ease: "easeOut", duration: 3 }} > */}
-              <Heading as="h3" size="lg">
-                <Type/>
-                  {/* A Software Developer, starting his <br/>
-                  journey in the vast universe <br/>
-                  of programming. */}
-              </Heading>
-            {/* </motion.div>
-          </AnimatePresence> */}
+          <Heading as="h3" size="lg" color="orange" p={2}>
+            <Type/>
+          </Heading>
         </Grid>
       </Grid>
     </>
