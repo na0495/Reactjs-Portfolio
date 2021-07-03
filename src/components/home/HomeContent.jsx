@@ -1,17 +1,21 @@
 import * as React from 'react'
 import { Center, Box, Heading, Text } from '@chakra-ui/react'
+import Fade from 'react-reveal/Fade';
 import './icon.css'
 
 export default function HomeContent(){
     return (
         <>
-        <Center>
+        <Center pt={200}>
             <Box p={25}>
-                <Heading as="h3" size="lg">
-                    Let me introduce introduce myself
-                </Heading>
-                {/* <Box > */}
+                <Fade bottom cascade>
+                    <Heading as="h3" size="lg">
+                        Let me introduce introduce myself
+                    </Heading>
+                </Fade>
+                <Fade bottom cascade>
                 <Text fontSize="lg" p={5}>
+                    <Fade bottom cascade></Fade>
                     <span className='icons'>&#129333;</span> As you can see, my name is Mrabet saâd, a 23 years old, from Tangier morocco.
                     <br/>
                     <br/>
@@ -35,6 +39,7 @@ export default function HomeContent(){
                     <br/>
                     and techenologie, like Django, React, Node.js ... 
                 </Text>
+                </Fade>
             </Box>
         </Center>
         </>
