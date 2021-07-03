@@ -43,7 +43,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={LandingPage} />
             <Route exact path="/skills" component={Skills} />
-            <Route exact path="/resumer" component={Resumer}/>
+            <Route exact path="/resume" component={Resumer}/>
           </Switch> 
         <Footer/>
       </Particles>

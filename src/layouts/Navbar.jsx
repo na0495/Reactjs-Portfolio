@@ -22,8 +22,8 @@ const Links = [
   path: '/skills'
 },
 {
-  name: 'Resumer',
-  path: '/resumer'
+  name: 'Resume',
+  path: '/resume'
 }];
 
 const NavLink = ({ name, path }) => (
