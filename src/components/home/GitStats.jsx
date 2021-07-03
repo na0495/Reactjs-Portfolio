@@ -16,13 +16,13 @@ function Feature({ title, desc, ...rest }) {
         <Box p={5} boxShadow="dark-lg" shadow="md" borderWidth="1px" {...rest} borderRadius="16" >
            <GitHub/>
         </Box>
-        <HStack spacing={4}>
-        {/* {language.map((key) => (
-            <Tag size= key={key} variant="solid" colorScheme={language.color}>
-                {language.name}
-            </Tag>
-        ))} */}
-        </HStack>
+        {/* <HStack spacing={4}>
+        // {/* {language.map((key) => (
+        //     <Tag size= key={key} variant="solid" colorScheme={language.color}>
+        //         {language.name}
+        //     </Tag>
+        // ))} 
+        </HStack> */}
       </Box>
     </Center>
   )

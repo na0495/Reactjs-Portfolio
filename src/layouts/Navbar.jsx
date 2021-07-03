@@ -7,15 +7,16 @@ import {
 //   Heading,
   IconButton,
   // Button,
-  useColorMode,
+  // useColorMode,
   useDisclosure,
   useColorModeValue,
   Stack,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import { FiSun } from 'react-icons/fi';
+// import { FiSun } from 'react-icons/fi';
 import { makeStyles } from '@material-ui/core/styles';
-import { FaMoon } from 'react-icons/fa';
+// import { FaMoon } from 'react-icons/fa';
+import SwitchMode from './SwitchMode';
 
 const useStyles = makeStyles({
   link: {
@@ -23,12 +24,12 @@ const useStyles = makeStyles({
   },
 });
 
-const Links = ['Landing', 'Projects', 'About me', 'My CV', 'Stats'];
-const iconProps = {
-    variant: 'ghost',
-    size: 'lg',
-    isRound: true
-  };
+const Links = ['About me', 'Skills', 'Resumer'];
+// const iconProps = {
+//     variant: 'ghost',
+//     size: 'lg',
+//     isRound: true
+//   };
 
 const NavLink = ({ children }) => (
   <Link
@@ -46,12 +47,12 @@ const NavLink = ({ children }) => (
 
 export default function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { colorMode, toggleColorMode } = useColorMode();
+  // const { colorMode, toggleColorMode } = useColorMode();
   const classes = useStyles();
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+      <Box  px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -80,6 +81,7 @@ export default function NavBar() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
+          <SwitchMode/>
             {/* <Button
               variant={'solid'}
               colorScheme={'teal'}
@@ -88,7 +90,7 @@ export default function NavBar() {
               leftIcon={<AddIcon />}>
               More Details
             </Button> */}
-            <Box
+            {/* <Box
               variant={'solid'}
               size={'sm'}
               mr={4}
@@ -99,15 +101,14 @@ export default function NavBar() {
               // // top="1.5rem"
               // // right="5.5rem"
             >
-                <IconButton
+                {/* <IconButton
                 aria-label="Color Mode"
                 icon={colorMode === 'light' ? <FaMoon /> : <FiSun />}
                 onClick={toggleColorMode}
                 size="lg"
                 isRound={true}
                 {...iconProps}
-                />
-            </Box>
+                /> */}
           </Flex>
         </Flex>
 
