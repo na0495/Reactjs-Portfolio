@@ -51,5 +51,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@iconify-icons/ic": "^1.1.7",
+    "@iconify/react": "^1.1.4"
   }
 }

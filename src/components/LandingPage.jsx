@@ -4,6 +4,7 @@ import Hero from './home/Hero';
 // import AboutMe from './home/AboutMe';
 import HomeContent from './home/HomeContent';
 import Particles from './Animation/Particles'
+import Experience from './home/Education';
 
 export default function LandingPage() {
     return (
@@ -13,6 +14,7 @@ export default function LandingPage() {
                 <Hero/>
                 {/* <AboutMe/> */}
                 <HomeContent/>
+                <Experience/>
             </Box>
         </Particles>
         </>
