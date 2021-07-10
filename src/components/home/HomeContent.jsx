@@ -16,13 +16,13 @@ export default function HomeContent(){
                 <Fade bottom cascade>
                 <Text fontSize="lg" p={5}>
                     <Fade bottom cascade></Fade>
-                    <span className='icons'>&#129333;</span> As you can see, my name is Mrabet saâd, a 23 years old, from Tangier morocco.
+                    <span className='icons'>&#129333;</span>My name is Mrabet saâd, a 23 years old, from Tangier morocco.
                     <br/>
                     <br/>
-                    <span className='icons'>&#127891;</span> I have a bachelor of science degree in Computer Engineering.
+                    <span className='icons'>&#127891;</span>I just complted my bachelor degree in Computer Engineering this year.
                     <br/>
                     <br/>
-                    <span className='icons'>&#127919;</span> I enjoy being challenged and engaging with projects that require me to work outside my comfort
+                    <span className='icons'>&#127919;</span>I enjoy being challenged and engaging with projects that require me to work outside my comfort
                     <br/>
                     zone and knowledge set, as continuing to learn new languages and developmenet techeniques.
                     <br/>
