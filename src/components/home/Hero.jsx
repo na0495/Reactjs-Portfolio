@@ -9,11 +9,9 @@ export default function Home() {
 
   return (
     <Box sx={{ height: window.innerHeight - 140}}>
-
-
     <Grid container  >
       <Grid item sx={12} sm={12}>
-        <Box sx={{ py: 10, px: 3, textAlign: 'center', mt:100}} >
+        <Box sx={{ py: 10, px: 3, textAlign: 'center', mt: 100}} >
           <Heading as="h2" size="3xl" isTruncated p={2}>
             Hello There
           </Heading>
