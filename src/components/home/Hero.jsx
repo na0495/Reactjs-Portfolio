@@ -3,24 +3,23 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Heading, Box } from "@chakra-ui/react"
 import { Grid } from '@material-ui/core';
 import { SplitText } from '../Animation/SplitText';
-import Fade from '../Animation/Fade';
 import Type from '../Animation/Type';
 
 export default function Home() {
 
   return (
-    <Box p={15} pt={100}>
-      <Grid container>
-        <Grid item sx={8} sm={8} >
-          <Box p={3}>
-            <Fade/>
-          </Box>
+    <Grid container >
+      <Grid item sx={12} sm={12}>
+        <Box sx={{ py: 10, px: 3, textAlign: 'center' }} mt={100} >
+          <Heading as="h2" size="3xl" isTruncated p={2}>
+            Hello There
+          </Heading>
           <AnimatePresence>
             <motion.div
               initial={{ opacity: 1 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-            >
+              >
               <Heading as="h2" size="2xl" isTruncated p={2}>
                 <SplitText
                   initial={{ y: '100%' }}
@@ -42,9 +41,9 @@ export default function Home() {
           <Heading as="h3" size="lg" color="orange" p={2}>
             <Type/>
           </Heading>
+        </Box>
         </Grid>
       </Grid>
-    </Box>
   );
 }
 
