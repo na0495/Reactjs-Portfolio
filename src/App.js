@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from './layouts/Navbar'
+import SwitchMode from './layouts/SwitchMode'
 import LandingPage from './components/LandingPage'
-import AboutMe from './components/AboutMe'
-import Skills from './components/Skills'
-import Resumer from './components/Resumer'
+// import AboutMe from './components/AboutMe'
+// import Skills from './components/Skills'
+// import Resumer from './components/Resumer'
 import Footer from './components/home/Footer'
 import {
   BrowserRouter as Router,
@@ -22,12 +22,12 @@ function App() {
   // }, []);
   return (
     <Router>
-      <Navbar/>
+      <SwitchMode/>
         <Switch>
-          <Route exact path="/" component={LandingPage} />
-          <Route exact path="/aboutme" component={AboutMe} />
+          <Route path="/" component={LandingPage} />
+          {/* <Route exact path="/aboutme" component={AboutMe} />
           <Route exact path="/skills" component={Skills} />
-          <Route exact path="/resume" component={Resumer}/>
+          <Route exact path="/resume" component={Resumer}/> */}
         </Switch> 
       <Footer/>
     </Router>
