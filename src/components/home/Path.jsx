@@ -52,7 +52,7 @@ export default function Path() {
             iconStyle={{ background: '#CAC0A5'}}
             icon={<Icon icon={devIcon} />}
           >
-            <Box p={15} m={-17}  sx={{ background: `mode.${colorMode}.background`}} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16">
+            <Box p={15} sx={{ background: `mode.${colorMode}.background`}} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16">
               <h3 style={{ textAlign: "left", marginBottom: "4px", fontWeight: 'bold'}}>
                 Full stack developer
               </h3>
@@ -74,7 +74,7 @@ export default function Path() {
             iconStyle={{ background: '#CAC0A5'}}
             icon={<Icon icon={educationIcon} />}
           >
-            <Box p={15} m={-17}  sx={{ background: `mode.${colorMode}.background`}} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16">
+            <Box p={15}  sx={{ background: `mode.${colorMode}.background`}} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16">
               <h3 style={{ textAlign: "left", marginBottom: "4px", fontWeight: 'bold'}}>
                 Bachelor in computer engineering
               </h3>
@@ -95,7 +95,7 @@ export default function Path() {
             iconStyle={{ background: '#CAC0A5'}}
             icon={<Icon icon={certificate20Filled} />}
           >
-            <Box p={15} m={-17}  sx={{ background: `mode.${colorMode}.background`}} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16">
+            <Box p={15} sx={{ background: `mode.${colorMode}.background`}} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16">
               <h3 className="vertical-timeline-element-title" style={{ textAlign: "left", marginBottom: "4px", fontWeight: 'bold'}}>DEUST MIP</h3>
               <h4 className="vertical-timeline-element-subtitle">Faculty of science and techenologie of Tangier</h4>
               <p>
