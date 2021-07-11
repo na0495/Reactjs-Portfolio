@@ -1,66 +1,112 @@
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import { Icon } from '@iconify/react';
+import certificate20Filled from '@iconify-icons/fluent/certificate-20-filled';
+import educationIcon from '@iconify-icons/cil/education';
+import devIcon from '@iconify-icons/fa-brands/dev';
 import "react-vertical-timeline-component/style.min.css";
-// eslint-disable-next-line
-import { Box, Stack, useColorMode, Center, Heading } from "@chakra-ui/react"
-  
-export default function Experience() {
-    // const { colorMode } = useColorMode();
-    return (
-      <Box mt={250}>
-        {/* <Stack spacing={12} p={6} pt={200}> */}
+import { Box, Badge , Center, Heading, useColorMode } from "@chakra-ui/react"
 
-        {/* <Center>
-          <Box backgroundColor={`mode.${colorMode}.background`} p={5} boxShadow="dark-lg" shadow="md" borderWidth="1px" borderRadius="16" > */}
-            {/* <Stack direction={["column", "row"]} spacing="24px"> */}
-            <Center>
-              <Heading p={50}>
-                My education
-              </Heading>
-            </Center>
-            <VerticalTimeline>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: 'rgb(33, 150, 243)'}}
-                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                date="2020 - 2021"
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                // icon={<WorkIcon />}
-              >
-                <h3 className="vertical-timeline-element-title">Bachelor in Computer Engeenering</h3>
-                <h4 className="vertical-timeline-element-subtitle">Faculty of science and techenologie of Tangier</h4>
-                <p>
-                Activities and Societies: C / (C++ OOP programming), Database Administration, Relational Databases Management Systems (MySQL), Networking (OSI network model), Operating Systems (Linux), Web Development (HTML5/CSS3/JavaScript/PHP), Client-Server Architecture, UML, Anglais
-                </p>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: 'rgb(33, 150, 243)'}}
-                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                date="2017 - 2020"
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                // icon={<WorkIcon />}
-              >
-                <h3 className="vertical-timeline-element-title">DEUST MIP</h3>
-                <h4 className="vertical-timeline-element-subtitle">Faculty of science and techenologie of Tangier</h4>
-                <p>
-                  Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-                </p>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                date="2011 - present"
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                // icon={<WorkIcon />}
-              >
-                <h3 className="vertical-timeline-element-title">Creative Director</h3>
-                <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-                <p>
-                  Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-                </p>
-              </VerticalTimelineElement>
-            </VerticalTimeline>
+export default function Experience() {
+    const { colorMode } = useColorMode();
+    const mainBachelor = ['C++ OOP programming',' Database Administration',' Relational Databases Management Systems (MySQL)', 'Networking (OSI network model)', 'Operating Systems (Linux) & bash scripitng', 'Web Development (HTML5/CSS3/JavaScript/PHP)', 'Client-Server Architecture', 'UML', 'English/French (TEC)']
+    const mainDeust = ['Maths (analysis & algebre)', 'computer science','data structures & algorithm', 'C programming language', 'Database & SQL', 'physique & chemistry']
+    const mainTecheno = ['Python', 'Django', 'Django Rest Framework', 'RESTful API', 'JavaScript', 'React', 'Redux', 'Scrum', 'SQL', 'PostgreSQL', 'Git', 'Github', 'Contabo Server']
+    
+    var mainBach = mainBachelor.map((p, i) => {
+      return (
+        <Badge fontSize="0.8em" ml={1} borderWidth="1px"  borderRadius="5" key={i}>
+          {p}
+        </Badge>
+      );
+    });
+
+    var mainDeu = mainDeust.map((p, i) => {
+      return (
+        <Badge fontSize="0.8em" ml={1} borderWidth="1px"  borderRadius="5" key={i}>
+          {p}
+        </Badge>
+      );
+    });
+
+    var mainTec = mainTecheno.map((p, i) => {
+      return (
+        <Badge fontSize="0.8em" ml={1} borderWidth="1px"  borderRadius="5" key={i}>
+          {p}
+        </Badge>
+      );
+    });
+
+    return (
+      <Box mt={100}>
+        <Center>
+          <Heading p={50}>
+            My education & experience :
+          </Heading>
+        </Center>
+        <VerticalTimeline>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'transparent'}}
+            contentArrowStyle={{ borderRight: '7px solid' }}
+            date="Mar 2021 - present"
+            iconStyle={{ background: '#F9FAFC'}}
+            icon={<Icon icon={devIcon} />}
+          >
+            <Box p={15} m={-17}  sx={{ background: `mode.${colorMode}.background`}} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16">
+              <h3 style={{ textAlign: "left", marginBottom: "4px", fontWeight: 'bold'}}>
+                Full stack developer
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">At PULL4YOU SERVICE S.A.R.L</h4>
+              <p>Development and deployment of a Web application that handles the delivery management of the collection of parcels.</p>
+              <p>
+                The technologies i'm working with : 
+              <div style={{ textAlign: "left", marginBottom: "4px", padding: "4px" }}>
+                {mainTec}
+              </div>
+              </p>
+            </Box>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'transparent'}}
+            contentArrowStyle={{ borderRight: '7px solid' }}
+            date="Sep 2020 - Jun 2021"
+            iconStyle={{ background: '#F9FAFC'}}
+            icon={<Icon icon={educationIcon} />}
+          >
+            <Box p={15} m={-17}  sx={{ background: `mode.${colorMode}.background`}} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16">
+              <h3 style={{ textAlign: "left", marginBottom: "4px", fontWeight: 'bold'}}>
+                Bachelor in computer engineering
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">At Faculty of science and techenologie of Tangier</h4>
+              <p>
+                Bachelor main programme : 
+              <div style={{ textAlign: "left", marginBottom: "4px", padding: "4px" }}>
+                {mainBach}
+              </div>
+              </p>
+            </Box>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'transparent'}}
+            contentArrowStyle={{ borderRight: '7px solid' }}
+            date="Sep 2017 - Jun 2020"
+            iconStyle={{ background: '#F9FAFC'}}
+            icon={<Icon icon={certificate20Filled} />}
+          >
+            <Box p={15} m={-17}  sx={{ background: `mode.${colorMode}.background`}} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16">
+              <h3 className="vertical-timeline-element-title" style={{ textAlign: "left", marginBottom: "4px", fontWeight: 'bold'}}>DEUST MIP</h3>
+              <h4 className="vertical-timeline-element-subtitle">Faculty of science and techenologie of Tangier</h4>
+              <p>
+                The main programme : 
+                <div style={{ textAlign: "left", marginBottom: "4px", padding: "4px" }}>
+                  {mainDeu}
+                </div>
+              </p>
+            </Box>
+          </VerticalTimelineElement>
+        </VerticalTimeline>
       </Box>
     );
   }

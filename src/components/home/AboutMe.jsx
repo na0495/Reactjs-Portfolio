@@ -5,7 +5,7 @@ import './icon.css'
 export default function AboutMe() {
     const { colorMode } = useColorMode();
     return (
-      <Fade bottom cascade>
+      <Fade bottom cascade delay={300}>
         <Stack spacing={12} p={6}>
         <Center pt={100}>
             <Box p={25} backgroundColor={`mode.${colorMode}.background`} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16">

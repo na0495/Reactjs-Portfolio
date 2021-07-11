@@ -78,13 +78,14 @@ const customColors = {
     light: {
       background: '#fff',
       Github: '#F9F6F0',
-      card: '#000',
+      card: '#F9FAFC',
       // cardText: '#fff',
     },
     dark: {
       background: 'rgb(16, 42, 67)',
       Github: '#F9F6F0',
-      card: '#fff',
+      card: '#766257',
+      
       // cardText: '#000',
     }
   }
