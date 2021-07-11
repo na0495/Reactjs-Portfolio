@@ -49,7 +49,7 @@ export default function Experience() {
             contentStyle={{ background: 'transparent'}}
             contentArrowStyle={{ borderRight: '7px solid' }}
             date="Mar 2021 - present"
-            iconStyle={{ background: '#F9FAFC'}}
+            iconStyle={{ background: '#CAC0A5'}}
             icon={<Icon icon={devIcon} />}
           >
             <Box p={15} m={-17}  sx={{ background: `mode.${colorMode}.background`}} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16">
@@ -71,7 +71,7 @@ export default function Experience() {
             contentStyle={{ background: 'transparent'}}
             contentArrowStyle={{ borderRight: '7px solid' }}
             date="Sep 2020 - Jun 2021"
-            iconStyle={{ background: '#F9FAFC'}}
+            iconStyle={{ background: '#CAC0A5'}}
             icon={<Icon icon={educationIcon} />}
           >
             <Box p={15} m={-17}  sx={{ background: `mode.${colorMode}.background`}} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16">
@@ -92,7 +92,7 @@ export default function Experience() {
             contentStyle={{ background: 'transparent'}}
             contentArrowStyle={{ borderRight: '7px solid' }}
             date="Sep 2017 - Jun 2020"
-            iconStyle={{ background: '#F9FAFC'}}
+            iconStyle={{ background: '#CAC0A5'}}
             icon={<Icon icon={certificate20Filled} />}
           >
             <Box p={15} m={-17}  sx={{ background: `mode.${colorMode}.background`}} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16">
