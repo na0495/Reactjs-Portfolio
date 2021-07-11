@@ -20,8 +20,6 @@ const Footer = props => {
       alignItems="center"
       {...props}
     >
-
-
       {siteConfig.author.accounts.map(sc => (
         <IconButton
           as={Link}
@@ -35,7 +33,6 @@ const Footer = props => {
           {...iconProps}
         />
       ))}
-            
     </Stack>
     <Center>
       <Heading as="h6" size="xs" alignItems="center" pb={50}> {siteConfig.copyright}</Heading>

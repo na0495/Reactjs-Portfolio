@@ -1,20 +1,19 @@
-// import * as React from "react";
 import { Box } from '@chakra-ui/layout';
 import Hero from './home/Hero';
 import AboutMe from './home/AboutMe';
 import Particles from './Animation/Particles'
-import Experience from './home/Education';
+import Path from './home/Path';
 
 export default function LandingPage() {
     return (
         <>
-        <Particles>
+          <Particles>
             <Box>
-                <Hero/>
-                <AboutMe/>
-                <Experience/>
+              <Hero/>
+              <AboutMe/>
+              <Path/>
             </Box>
-        </Particles>
+          </Particles>
         </>
     )
 

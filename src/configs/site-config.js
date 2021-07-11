@@ -18,29 +18,17 @@ const siteConfig = {
         icon: <FaGithub />
       },
       {
-        url: '',
+        url: 'https://twitter.com/na0495',
         label: 'Twitter Account',
         type: 'twitter',
         icon: <FaTwitter />
       },
-      // {
-      //   url: 'https://dev.to/m_ahmad',
-      //   label: 'Dev Account',
-      //   type: 'gray',
-      //   icon: <FaDev />
-      // },
       {
         url: 'https://www.linkedin.com/in/saad-mrabet-978a01188/',
         label: 'LinkedIn Account',
         type: 'linkedin',
         icon: <FaLinkedin />
       },
-      // {
-      //   url: 'https://www.quora.com/profile/Muhammad-Ahmad-66',
-      //   label: 'Quora Account',
-      //   type: 'red',
-      //   icon: <FaQuora />
-      // },
       {
         url: 'mailto:saadmrabet008@gmail.com',
         label: 'Mail saad',

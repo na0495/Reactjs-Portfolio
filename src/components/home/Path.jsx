@@ -6,7 +6,7 @@ import devIcon from '@iconify-icons/fa-brands/dev';
 import "react-vertical-timeline-component/style.min.css";
 import { Box, Badge , Center, Heading, useColorMode } from "@chakra-ui/react"
 
-export default function Experience() {
+export default function Path() {
     const { colorMode } = useColorMode();
     const mainBachelor = ['C++ OOP programming',' Database Administration',' Relational Databases Management Systems (MySQL)', 'Networking (OSI network model)', 'Operating Systems (Linux) & bash scripitng', 'Web Development (HTML5/CSS3/JavaScript/PHP)', 'Client-Server Architecture', 'UML', 'English/French (TEC)']
     const mainDeust = ['Maths (analysis & algebre)', 'computer science','data structures & algorithm', 'C programming language', 'Database & SQL', 'physique & chemistry']
