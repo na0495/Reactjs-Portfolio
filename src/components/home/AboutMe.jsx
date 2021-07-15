@@ -18,7 +18,6 @@ export default function AboutMe() {
                   <div>
                     <h2><span className='icons'>&#129333;</span>  My name is Mrabet saâd, a 23 years old, from Tangier morocco.</h2>
                     <h2><span className='icons'>&#127891;</span>  I just completed my bachelor's degree in Computer Engineering this year.</h2>
-                    <h2><span className='icons'>&#129333;</span>  My name is Mrabet saâd, a 23 years old, from Tangier morocco.</h2>
                     <h2><span className='icons'>&#127919;</span>  I enjoy being challenged and engaging with projects that require me to work outside my comfort</h2>
                     <h2>zone and knowledge set, as continuing to learn new languages and development techniques.</h2>
                     <h2><span className='icons'>&#128200;</span>  I'm fluent in many programming languages, especially in JavaScript & Python.</h2>

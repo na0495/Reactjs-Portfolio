@@ -1,16 +1,16 @@
-import * as React from "react";
 import { motion } from "framer-motion";
 import { Box, Heading, Center, useColorMode, HStack } from '@chakra-ui/react';
-import './tech.css'
 
 export default function Tech() {
     const colorMode = useColorMode();
 
     return (
+        <>
+
         <Box backgroundColor={`mode.${colorMode}.background`} pt={100} pb={100}>
             <Center>
                 <Heading>My Tech Stack :</Heading>
-            </Center>
+            </Center >
                 <Center>
                 <HStack p={15}>
                     <motion.img style={{ width: 85, height: 85, borderRadius: 15, border: 'solid black 2px'}} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} src="/language/python.png" />
@@ -25,7 +25,7 @@ export default function Tech() {
                 </HStack>
                 </Center>
                 <Center>
-                <HStack p={15}>
+                <HStack p={15} backgroundColor={`mode.${colorMode}.background`}>
                     <motion.img style={{ width: 85, height: 85, borderRadius: 15, border: 'solid black 2px'}} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} src="/language/django.png" />
                     <motion.img style={{ width: 85, height: 85, borderRadius: 15, border: 'solid black 2px'}} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} src="/language/react.png" />
                     <motion.img style={{ width: 85, height: 85, borderRadius: 15, border: 'solid black 2px'}} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} src="/language/redux.png" />
@@ -37,5 +37,6 @@ export default function Tech() {
                 </HStack>
                 </Center>
         </Box>
+        </>
     )
 }
