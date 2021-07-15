@@ -1,9 +1,10 @@
 import Fade from 'react-reveal/Fade';
 // eslint-disable-next-line 
 import { Heading, Box, Text, Stack, useColorMode, Center, Tag, HStack } from "@chakra-ui/react"
-import GitHub from './GitHub'
+// import GitHub from './GitHub'
 
 export default function GitStats() {
+  // eslint-disable-next-line
     const { colorMode } = useColorMode();
     return (
       <Fade bottom cascade>
