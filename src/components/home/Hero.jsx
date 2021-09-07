@@ -1,13 +1,28 @@
 import * as React from "react";
 import { AnimatePresence, motion } from 'framer-motion'
-import { Heading } from "@chakra-ui/react"
+import { IconButton, Link, Heading } from '@chakra-ui/react';
 import { Grid, Box, Avatar } from '@material-ui/core';
 import { SplitText } from '../Animation/SplitText';
 import Type from '../Animation/Type';
 import { makeStyles } from '@material-ui/core/styles';
 import './icon.css'
+import siteConfig from '../../configs/site-config';
+
+const iconProps = {
+  variant: 'ghost',
+  size: 'lg',
+  isRound: true
+};
 
 const useStyles = makeStyles((theme) => ({
+  iconBox: {
+    marginTop: theme.spacing(10),
+  },
+  icons: {
+    padding: theme.spacing(3),
+    fontSize: '2rem',
+
+  },
   image : {
     width: theme.spacing(45),
     height: theme.spacing(45),
@@ -19,9 +34,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignContent: 'center',
     display: 'flex',
-
     margin: 'auto',
-    marginTop: theme.spacing(7),
+    marginTop: theme.spacing(11),
     marginBottom: theme.spacing(4),
   },
   box: {
@@ -74,6 +88,21 @@ export default function Home() {
           <Heading as="h2" size="3xl" color="orange" p={2}>
             <Type/>
           </Heading>
+        </Box>
+        <Box className={classes.iconBox}>
+          {siteConfig.author.accounts.map(sc => (
+            <IconButton
+            className = {classes.icons}
+              as={Link}
+              isExternal
+              key={sc.label}
+              href={sc.url}
+              aria-label={sc.label}
+              colorScheme={sc.type}
+              icon={sc.icon}
+              {...iconProps}
+            />
+          ))}
         </Box>
         </Grid>
       </Grid>
