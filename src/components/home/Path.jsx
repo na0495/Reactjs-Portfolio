@@ -10,11 +10,11 @@ export default function Path() {
     const { colorMode } = useColorMode();
     const mainBachelor = ['C++ OOP programming',' Database Administration',' Relational Databases Management Systems (MySQL)', 'Networking (OSI network model)', 'Operating Systems (Linux) & bash scripitng', 'Web Development (HTML5/CSS3/JavaScript/PHP)', 'Client-Server Architecture', 'UML', 'English/French (TEC)']
     const mainDeust = ['Maths (analysis & algebre)', 'computer science','data structures & algorithm', 'C programming language', 'Database & SQL', 'physique & chemistry']
-    const mainTecheno = ['Python', 'Django', 'Django Rest Framework', 'RESTful API', 'JavaScript', 'React', 'Redux', 'Scrum', 'SQL', 'PostgreSQL', 'Git', 'Github', 'Contabo Server']
-    
+    const mainTecheno = ['Python', 'Django', 'Django Rest Framework', 'RESTful API', 'Python  3rd party libraires', 'JavaScript', 'React', 'Redux', 'Scrum', 'SQL', 'PostgreSQL', 'Git', 'Github', 'Contabo Server']
+    const mainStack = ['Python', 'Django', 'Django Rest Framework', 'RESTful API', 'Python  3rd party libraires', 'Angular', 'TypeScript', 'Unit testing', 'Test Driven Devlopment', 'SQLite', 'PostegreSQL', 'POSTMAN', 'git', 'GitHub']
     var mainBach = mainBachelor.map((p, i) => {
       return (
-        <Badge fontSize="0.8em" ml={1} borderWidth="1px"  borderRadius="5" key={i}>
+        <Badge fontSize="0.8em" ml={1} borderWidth="1px" p={1} m={1}  borderRadius="10" key={i}>
           {p}
         </Badge>
       );
@@ -22,7 +22,7 @@ export default function Path() {
 
     var mainDeu = mainDeust.map((p, i) => {
       return (
-        <Badge fontSize="0.8em" ml={1} borderWidth="1px"  borderRadius="5" key={i}>
+        <Badge fontSize="0.8em" ml={1} borderWidth="1px" p={1} m={1}  borderRadius="10" key={i}>
           {p}
         </Badge>
       );
@@ -30,7 +30,15 @@ export default function Path() {
 
     var mainTec = mainTecheno.map((p, i) => {
       return (
-        <Badge fontSize="0.8em" ml={1} borderWidth="1px"  borderRadius="5" key={i}>
+        <Badge fontSize="0.8em" ml={1} borderWidth="1px" p={1} m={1}  borderRadius="10" key={i}>
+          {p}
+        </Badge>
+      );
+    });
+
+    var mainTecStack = mainStack.map((p, i) => {
+      return (
+        <Badge fontSize="0.8em" ml={1} borderWidth="1px" p={1} m={1}  borderRadius="10" key={i}>
           {p}
         </Badge>
       );
@@ -44,6 +52,30 @@ export default function Path() {
           </Heading>
         </Center>
         <VerticalTimeline>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'transparent'}}
+            contentArrowStyle={{ borderRight: '7px solid' }}
+            date="Sep 2020 - Jun 2021"
+            iconStyle={{ background: '#CAC0A5'}}
+            icon={<Icon icon={educationIcon} />}
+          >
+            <Box p={15}  sx={{ background: `mode.${colorMode}.background`}} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16">
+              <h3 style={{ textAlign: "left", marginBottom: "4px", fontWeight: 'bold'}}>
+                Full stack developer
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">at Atkana IT consulting </h4>
+              <p>Development of new application from scratch & scaling them along with Test Driven development 
+              methodology, development of a responsive Front-end with UX practice & Backend interface.
+              </p>
+              <p>
+              The technologies i'm working with : 
+              <div style={{ textAlign: "left", marginBottom: "4px", padding: "4px" }}>
+                {mainTecStack}
+              </div>
+              </p>
+            </Box>
+          </VerticalTimelineElement>
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'transparent'}}

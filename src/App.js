@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from './layouts/Navbar'
+import SwitchMode from './layouts/SwitchMode'
 import LandingPage from './components/LandingPage'
 // import AboutMe from './components/AboutMe'
 // import Skills from './components/Skills'
@@ -14,7 +14,7 @@ import {
 function App() {
   return (
     <Router>
-      <Navbar/>
+      <SwitchMode/>
         <Switch>
           <Route path="/" component={LandingPage} />
           {/* <Route exact path="/aboutme" component={AboutMe} />
