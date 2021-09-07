@@ -1,6 +1,7 @@
 import React from 'react';
-import { Stack, IconButton, Link, Heading, Center } from '@chakra-ui/react';
+import { Stack, IconButton, Link, Heading, Center, Box } from '@chakra-ui/react';
 import siteConfig from '../../configs/site-config';
+import { makeStyles } from '@material-ui/core/styles';
 
 const iconProps = {
   variant: 'ghost',
@@ -8,7 +9,19 @@ const iconProps = {
   isRound: true
 };
 
+const useStyles = makeStyles((theme) => ({
+  iconBox: {
+    marginTop: theme.spacing(10),
+  },
+  icons: {
+    padding: theme.spacing(3),
+    fontSize: '2rem',
+
+  }
+}));
+
 const Footer = props => {
+  const classes = useStyles();
   return (
     <>
     <Stack
@@ -20,19 +33,21 @@ const Footer = props => {
       alignItems="center"
       {...props}
     >
-      {siteConfig.author.accounts.map(sc => (
-        <IconButton
-          as={Link}
-          isExternal
-          key={sc.label}
-          href={sc.url}
-          aria-label={sc.label}
-          size="lg"
-          colorScheme={sc.type}
-          icon={sc.icon}
-          {...iconProps}
-        />
-      ))}
+        <Box className={classes.iconBox}>
+          {siteConfig.author.accounts.map(sc => (
+            <IconButton
+            className = {classes.icons}
+              as={Link}
+              isExternal
+              key={sc.label}
+              href={sc.url}
+              aria-label={sc.label}
+              colorScheme={sc.type}
+              icon={sc.icon}
+              {...iconProps}
+            />
+          ))}
+        </Box>
     </Stack>
     <Center>
       <Heading as="h6" size="xs" alignItems="center" pb={50}> {siteConfig.copyright}</Heading>

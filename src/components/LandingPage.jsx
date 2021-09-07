@@ -4,6 +4,7 @@ import Particles from './Animation/Particles'
 import Path from './home/Path';
 import Tech from './home/Tech';
 import GitStats from './home/GitStats';
+import GitHub from './home/GitHub';
 
 export default function LandingPage() {
     return (
@@ -13,6 +14,7 @@ export default function LandingPage() {
             <AboutMe/>
             <Path/>
             <Tech/>
+            <GitHub/>
             <GitStats/>
           </Particles>
         </>
