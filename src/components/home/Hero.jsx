@@ -1,19 +1,50 @@
 import * as React from "react";
 import { AnimatePresence, motion } from 'framer-motion'
-import { Heading, Box } from "@chakra-ui/react"
-import { Grid } from '@material-ui/core';
+import { Heading } from "@chakra-ui/react"
+import { Grid, Box, Avatar } from '@material-ui/core';
 import { SplitText } from '../Animation/SplitText';
 import Type from '../Animation/Type';
+import { makeStyles } from '@material-ui/core/styles';
 import './icon.css'
 
+const useStyles = makeStyles((theme) => ({
+  image : {
+    width: theme.spacing(45),
+    height: theme.spacing(45),
+    display: 'table-cell',
+    textAlign: 'center',
+    verticalAlign: 'middle',
+  },
+  avatar: {
+    justifyContent: 'center',
+    alignContent: 'center',
+    display: 'flex',
+
+    margin: 'auto',
+    marginTop: theme.spacing(7),
+    marginBottom: theme.spacing(4),
+  },
+  box: {
+    marginTop: theme.spacing(14),
+  }
+}));
+
+
+
 export default function Home() {
+  const classes = useStyles();
 
   return (
     <Box sx={{ height: window.innerHeight - 140}}>
     <Grid container  >
-      <Grid item sx={12} sm={12}>
-        <Box sx={{ py: 10, px: 3, textAlign: 'center', mt: 100}} >
-          <Heading as="h1" size="4xl" isTruncated p={2}>
+      <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
+        <Box className={classes.avatar}>
+          <Avatar alt="Mrabet Saad" src={process.env.PUBLIC_URL + 'images/me.png'} className={classes.image} />
+        </Box>
+      </Grid>
+      <Grid item sx={12} sm={12} md={7} lg={7} xl={7}>
+        <Box className={classes.box} >
+          <Heading as="h2" size="3xl"  isTruncated p={2}>
             Hello There <span className="waving-hand">&#128075;</span>
           </Heading>
           <AnimatePresence>
@@ -22,7 +53,7 @@ export default function Home() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               >
-              <Heading as="h2" size="3xl" isTruncated p={2}>
+              <Heading as="h1" size="4xl" isTruncated p={2}>
                 <SplitText
                   initial={{ y: '100%' }}
                   animate="visible"
@@ -40,7 +71,7 @@ export default function Home() {
               </Heading>
             </motion.div> 
           </AnimatePresence>
-          <Heading as="h3" size="lg" color="orange" p={2}>
+          <Heading as="h2" size="3xl" color="orange" p={2}>
             <Type/>
           </Heading>
         </Box>

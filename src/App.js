@@ -1,5 +1,5 @@
 import React from "react";
-import SwitchMode from './layouts/SwitchMode'
+import Navbar from './layouts/Navbar'
 import LandingPage from './components/LandingPage'
 // import AboutMe from './components/AboutMe'
 // import Skills from './components/Skills'
@@ -12,17 +12,9 @@ import {
 } from "react-router-dom";
 
 function App() {
-  // const [load, upadateLoad] = useState(true);
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     upadateLoad(false);
-  //   }, 1200);
-    
-  //   return () => clearTimeout(timer);
-  // }, []);
   return (
     <Router>
-      <SwitchMode/>
+      <Navbar/>
         <Switch>
           <Route path="/" component={LandingPage} />
           {/* <Route exact path="/aboutme" component={AboutMe} />
