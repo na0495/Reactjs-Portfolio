@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Fade from 'react-reveal/Fade';
 import { Box, Heading, Center, useColorMode, Wrap, WrapItem, Text, Grid } from '@chakra-ui/react';
 
 export default function Tech() {
@@ -39,35 +40,42 @@ export default function Tech() {
     ]
 
     return (
-      <>
+      <Fade Fade bottom cascade delay={1000}>
         <Center>
           <Box p={25} backgroundColor={`mode.${colorMode}.background`} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16" w="75%" mt={100} mb={100}>            
           {skillsData.map(index => (
             <Box>
-                <Heading alignItems="center">{index.title}</Heading>
-                <Grid templateColumns="repeat(2, 1fr)" gap={6}>
-                    <Box p={25}>
-                        <Text color="gray.500" fontSize="2xl" >{index.description}</Text>
-                    </Box>
-                <Box p={25}>
-                    <Wrap >
-                    {index.data.map(sc => (
-                        <WrapItem>
-                            <motion.img 
-                                style={{ width: 85, height: 85, borderRadius: 15}} 
-                                whileHover={{ scale: 1.2 }} 
-                                whileTap={{ scale: 0.8 }} 
-                                src={'/language/'+sc+'.png'} alt={sc}
-                            />
-                        </WrapItem>
-                    ))}
-                    </Wrap>
-                </Box>
-                </Grid>
+                <Fade Fade bottom cascade delay={1000}>
+                  <Heading alignItems="center">{index.title}</Heading>
+                </Fade>
+                <Fade Fade bottom cascade delay={1250}>
+                    <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+                        <Box p={25}>
+                            <Text color="gray.500" fontSize="2xl" >{index.description}</Text>
+                        </Box>
+                        <Box p={25}>
+                            <Wrap >
+                            {index.data.map(sc => (
+                                <WrapItem>
+                                  <Fade Fade bottom cascade delay={1500}>
+                                    <motion.img 
+                                        style={{ width: 85, height: 85, borderRadius: 15}} 
+                                        whileHover={{ scale: 1.2 }} 
+                                        whileTap={{ scale: 0.8 }} 
+                                        src={'/language/'+sc+'.png'} alt={sc}
+                                        />
+                                  </Fade>
+                                </WrapItem>
+                            ))}
+                            </Wrap>
+                        </Box>
+                    </Grid>
+                </Fade>
+
             </Box>
             ))}
           </Box>
         </Center>
-      </>
+      </Fade>
     )
 }
