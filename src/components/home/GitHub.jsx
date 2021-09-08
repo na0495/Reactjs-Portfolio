@@ -1,6 +1,6 @@
 import GitHubCalendar from "react-github-calendar";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { Box, useColorMode, Heading, Center } from "@chakra-ui/react";
 
 const useStyle = makeStyles(theme => ({
@@ -41,10 +41,19 @@ function GitHub() {
         </Heading>
         <Box className={classes.calander}>
             <GitHubCalendar
-            username="na0495"
-            blockSize={15}
-            blockMargin={5}
-            fontSize={16}
+              username="na0495"
+              blockSize={18}
+              // theme={{
+              //   background: `mode.${colorMode}.background`,
+              //   text: `mode.${colorMode}.text`,
+              //   grade4: '#216e39',
+              //   grade3: '#30a14e',
+              //   grade2: '#40c463',
+              //   grade1: '#9be9a8',
+              //   grade0: '#ebedf0'
+              // }}
+              blockMargin={5}
+              fontSize={16}
             />
         </Box>
         <Box className={classes.details}>
