@@ -67,11 +67,11 @@ export default function Work() {
               <Heading as="h4" size="md" color="orange" pt={2}>
                 at Atkana IT consulting
               </Heading>
-              <p>Development of new application from scratch & scaling them along with Test Driven development 
-              methodology, development of a responsive Front-end with UX practice & Backend interface.
+              <p fontSize="xl">Development of web application from scratch & scaling it along with Test Driven development 
+              methodology, development of a responsive Front-end with UX practice with Angular & Backend service with Django.
               </p>
               <p>
-              The technologies i'm working with : 
+              The technologies i'm working with on that project are: 
               <div style={{ textAlign: "left", marginBottom: "4px", padding: "4px" }}>
                 {mainTecStack}
               </div>

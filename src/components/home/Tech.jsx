@@ -13,17 +13,17 @@ export default function Tech() {
     const skillsData = [
         {
             title: 'Programming languages',
-            description: "I'm very familiar working with bunch of programming languages, especialy Python & Javascript, HTMl/CSS since i more into web devlopment those days",
+            description: "Those are the programming langauges that i'm familiar with, i'm very fluent in programming with Python or JavaScript/TypeScript, in other hand you can realy do much in web dev with out knowing HTML/CSS, and finaly i have a small knowlege working with Java, C++ & C",
             data: programming,
         },
         {
             title: 'Front-end Framework',
-            description: "In my past experience i had the chance to work with many framework and librarys in front-end development, i did work with React Javascript library alongside Redux, and i also hade the chance to work with Angular Framework, and styling framework as Boostrap 4/5 & recently tailwind.",
+            description: "I had the chance to work with many framework and librarys in front-end development, i did work with React Javascript library alongside Redux, and i also hade the chance to work with Angular Framework, and styling framework as Boostrap 4/5 & recently tailwind.",
             data: frontFramework,
         },
         {
             title: 'Back-end Framework',
-            description: "For the Back-end development, i did work with Laravel framework back when i was studying mybachelor degree, but now i'm mainly working with Django framework alongside many librarys and framework, as Django rest framework, django filter, AllAuth, Jwt and many others ...",
+            description: "For the Back-end development, i did work with Laravel framework back in the past when i was studying mybachelor degree, but now i'm mainly working with Django framework alongside many librarys and framework, as Django rest framework, django filter, All Auth, Jwt and many others ...",
             data: backFramework,
         },
         {
@@ -45,7 +45,7 @@ export default function Tech() {
           <Box p={25} backgroundColor={`mode.${colorMode}.background`} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16" w="75%" mt={100} mb={100}>            
           {skillsData.map(index => (
             <Fade cascade>
-                <Heading alignItems="center">{index.title}</Heading>
+                <Heading pt={5} pl={5} alignItems="center">{index.title}</Heading>
                 <Grid templateColumns="repeat(2, 1fr)" gap={6}>
                     <Box p={25}>
                         <Text color="gray.500" fontSize="2xl" >{index.description}</Text>
