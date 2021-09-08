@@ -24,8 +24,8 @@ const useStyles = makeStyles((theme) => ({
 
   },
   image : {
-    width: theme.spacing(45),
-    height: theme.spacing(45),
+    width: theme.spacing(25),
+    height: theme.spacing(25),
     display: 'table-cell',
     textAlign: 'center',
     verticalAlign: 'middle',
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     alignContent: 'center',
     display: 'flex',
     margin: 'auto',
-    marginTop: theme.spacing(11),
+    marginTop: theme.spacing(25),
     marginBottom: theme.spacing(4),
   },
   box: {
@@ -52,9 +52,18 @@ export default function Home() {
     <Box sx={{ height: window.innerHeight - 140}} mb={15}>
     <Grid container  >
       <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
-        <Box className={classes.avatar}>
-          <Avatar alt="Mrabet Saad" src={process.env.PUBLIC_URL + 'images/me.png'} className={classes.image} />
-        </Box>
+          <Box className={classes.avatar}>
+        <motion.div   
+          initial={{ scale: 0 }}
+          animate={{ scale: 2 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20
+          }}>
+            <Avatar alt="Mrabet Saad" src={process.env.PUBLIC_URL + 'images/me.png'} className={classes.image} />
+        </motion.div>
+          </Box>
       </Grid>
       <Grid item sx={12} sm={12} md={7} lg={7} xl={7}>
         <Box className={classes.box} >
