@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Box, Heading, Center, useColorMode, Wrap, WrapItem, Text, Grid } from '@chakra-ui/react';
+import Fade from 'react-reveal/Fade';
 
 export default function Tech() {
     const { colorMode } = useColorMode();
@@ -43,7 +44,7 @@ export default function Tech() {
         <Center>
           <Box p={25} backgroundColor={`mode.${colorMode}.background`} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16" w="75%" mt={100} mb={100}>            
           {skillsData.map(index => (
-            <Box>
+            <Fade cascade>
                 <Heading alignItems="center">{index.title}</Heading>
                 <Grid templateColumns="repeat(2, 1fr)" gap={6}>
                     <Box p={25}>
@@ -64,7 +65,7 @@ export default function Tech() {
                     </Wrap>
                 </Box>
                 </Grid>
-            </Box>
+            </Fade>
             ))}
           </Box>
         </Center>
