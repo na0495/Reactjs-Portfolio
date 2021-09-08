@@ -4,7 +4,7 @@ import Particles from './Animation/Particles'
 import Work from './home/Work';
 import Studys from './home/Studys';
 import Tech from './home/Tech';
-// import GitStats from './home/GitStats';
+import Project from './home/Project';
 import GitHub from './home/GitHub';
 
 export default function LandingPage() {
@@ -16,6 +16,7 @@ export default function LandingPage() {
             <Work/>
             <Studys/>
             <Tech/>
+            <Project/>
             <GitHub/>
             {/* <GitStats/> */}
           </Particles>

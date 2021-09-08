@@ -2,10 +2,14 @@ import React from 'react';
 import {
   Box,
   IconButton,
+  useColorModeValue,
   useColorMode,
 } from '@chakra-ui/react';
 import { FiSun } from 'react-icons/fi';
 import { FaMoon } from 'react-icons/fa';
+import useSound from "use-sound";
+import lightswitch from "../assets/audios/lightswitch.mp3";
+
 
 const iconProps = {
   variant: 'ghost',
@@ -15,6 +19,21 @@ const iconProps = {
 
 const SwitchMode = props => {
   const { colorMode, toggleColorMode } = useColorMode();
+  const text = useColorModeValue("dark", "light");
+
+  const [play] = useSound(lightswitch, {
+    volume: 0.05,
+    sprite: {
+      on: [0, 300],
+      off: [500, 300]
+    }
+  });
+
+  const handleClick = () => {
+    text === "dark" ? play({ id: "on" }) : play({ id: "off" });
+    toggleColorMode();
+  };
+
 
   return (
     <>
@@ -31,8 +50,9 @@ const SwitchMode = props => {
         <IconButton
           boxShadow="dark-lg"
           aria-label="Color Mode"
+          onClick={handleClick}
           icon={colorMode === 'light' ? <FaMoon /> : <FiSun />}
-          onClick={toggleColorMode}
+          // onClick={toggleColorMode}
           size="lg"
           isRound={true}
           {...iconProps}

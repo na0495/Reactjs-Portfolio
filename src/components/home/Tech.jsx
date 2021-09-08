@@ -40,7 +40,7 @@ export default function Tech() {
     ]
 
     return (
-      <>
+        <>
         <Center>
           <Box p={25} backgroundColor={`mode.${colorMode}.background`} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16" w="75%" mt={100} mb={100}>            
           {skillsData.map(index => (

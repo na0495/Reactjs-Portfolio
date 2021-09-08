@@ -12,7 +12,9 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.4",
     "framer-motion": "^4.1.17",
+    "http2": "^3.3.7",
     "i18next": "^20.6.0",
     "i18next-browser-languagedetector": "^6.1.2",
     "react": "^17.0.2",
@@ -26,9 +28,12 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-spring": "^9.2.3",
+    "react-stack-grid": "^0.7.1",
     "react-vertical-timeline-component": "^3.3.3",
     "react-wavify": "^1.5.2",
     "typewriter-effect": "^2.18.0",
+    "use-http": "^1.0.24",
+    "use-sound": "^4.0.1",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
