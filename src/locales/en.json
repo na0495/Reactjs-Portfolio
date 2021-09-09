@@ -1,3 +1,8 @@
 {
-    "Welcome to React": "Welcome to React and react-i18next"
+    "type": {
+        "software_developer": "Software Developer",
+        "full_stack": "Full Stack Developer",
+        "open_source": "Open Source Contributor"
+    },
+    "hello": "Hello there"
 }

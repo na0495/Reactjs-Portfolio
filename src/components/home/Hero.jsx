@@ -1,4 +1,6 @@
 import * as React from "react";
+import useLocales from "../../hooks/useLocales";
+import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion } from 'framer-motion'
 import { Heading } from '@chakra-ui/react';
 import { Grid, Box, Avatar } from '@material-ui/core';
@@ -36,6 +38,10 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function Home() {
+  // eslint-disable-next-line
+  const { translate } = useLocales();
+  // eslint-disable-next-line
+  const { t, i18n } = useTranslation();
   const classes = useStyles();
 
   return (
@@ -58,7 +64,7 @@ export default function Home() {
       <Grid item sx={12} sm={12} md={7} lg={7} xl={7}>
         <Box className={classes.box} >
           <Heading as="h2" size="3xl"  isTruncated p={4}>
-            Hello There <span className="waving-hand">&#128075;</span>
+            {t('hello')} <span className="waving-hand">&#128075;</span>
           </Heading>
           <AnimatePresence>
             <motion.div

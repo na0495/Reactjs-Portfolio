@@ -1,3 +1,7 @@
 {
-    "Welcome to React": "Welcome to React and react-i18next"
+    "type": {
+        "software_developer": "Softwareentwickler",
+        "full_stack": "Full-Stack-Entwickler",
+        "open_source": "Open-Source-Mitwirkender"
+    }
 }
