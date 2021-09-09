@@ -80,13 +80,16 @@ const customColors = {
       Github: '#F9F6F0',
       card: '#F9FAFC',
       text: '#000',
+      path: '#D6D2C4'
+      
       // cardText: '#fff',
     },
     dark: {
-      background: 'rgb(16, 42, 67)',
+      background: '#102a43',
       Github: '#F9F6F0',
       card: '#766257',
       text: '#fff',
+      path: '#325171'
       
       // cardText: '#000',
     }
