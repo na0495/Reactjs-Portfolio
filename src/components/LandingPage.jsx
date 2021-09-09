@@ -15,11 +15,13 @@ export default function LandingPage() {
         <>
             <Particles>
               <Hero/>
-              <AboutMe/>
             </Particles>
+            <AboutMe/>
             {/* <Box p={25} sx={{ background: `mode.${colorMode}.path`}}> */}
+            <Particles>
               <Work/>
               <Studys/>
+            </Particles>
             {/* </Box> */}
             <Tech/>
             <Project/>
