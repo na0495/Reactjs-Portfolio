@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, IconButton, Link, Heading, Center, Box } from '@chakra-ui/react';
+import { Stack, IconButton, Link, Heading, Center, Box, useColorMode } from '@chakra-ui/react';
 import siteConfig from '../../configs/site-config';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -11,7 +11,7 @@ const iconProps = {
 
 const useStyles = makeStyles((theme) => ({
   iconBox: {
-    marginTop: theme.spacing(10),
+    marginTop: theme.spacing(5),
   },
   icons: {
     padding: theme.spacing(3),
@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Footer = props => {
   const classes = useStyles();
+  const colorMode = useColorMode();
   return (
     <>
     <Stack
@@ -33,7 +34,7 @@ const Footer = props => {
       alignItems="center"
       {...props}
     >
-        <Box className={classes.iconBox}>
+        <Box backgroundColor={`mode.${colorMode}.nav`} className={classes.iconBox}>
           {siteConfig.author.accounts.map(sc => (
             <IconButton
             className = {classes.icons}
