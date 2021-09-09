@@ -1,17 +1,35 @@
+import React from 'react';
+import Particles from '../components/Animation/Particles'
+import { Link } from 'react-router-dom';
+import { Heading, Text} from '@chakra-ui/layout';
+import { makeStyles } from '@material-ui/core';
 
-// import Particles from '../components/Animation/Particles'
-import Project from '../components/home/Project';
-import GitHub from '../components/home/GitHub';
-// import { useColorMode } from "@chakra-ui/react"
+const useStyles = makeStyles((theme) => ({
+    title: {
+        justifyContent: 'center',
+        alignContent: 'center',
+        display: 'flex',
+    },
+    root: {
+        paddingTop: 10,
+        paddingBottom: 150,
+    }
+}));
 
-export default function Projecto() {
-  // const { colorMode } = useColorMode();
-
+const NotFound = () => {
+    const classes = useStyles();
     return (
-        <>
-            <Project/>
-            <GitHub/>
-        </>
-    )
+    <Particles>
+    <div className={classes.root}>
+        <Heading as="h1" size="2xl" className={classes.title} isTruncated p={4} mt={250} >
+            Comming Soon ! 
+        </Heading>
+        <Link to="/" className={classes.title} mb={100} mt={25}>
+            <Text fontSize="3xl" color="orange"> Go Home </Text>
+        </Link>
+    </div>
+    </Particles>
+    );
+};
 
-}
+export default NotFound;

@@ -31,6 +31,10 @@ const Links = [
   path: '/resume'
 },
 {
+  name: 'Open source',
+  path: '/github'
+},
+{
   name: 'Project',
   path: '/project'
 }
