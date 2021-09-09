@@ -80,6 +80,7 @@ export default function NavBar() {
           </HStack>
           <Flex alignItems={'center'}>
             <SwitchMode/>
+            <NavLink  name='Singel page' path='/singelpage'>Singel page</NavLink>
           </Flex>
         </Flex>
 

@@ -51,12 +51,12 @@ export default function Tech() {
                 <Heading pt={5} pl={5} alignItems="center">{index.title}</Heading>
                 <Grid container>
                     <Grid item sm={12} md={6} >
-                        <Box p={25}>
+                        <Box p={25} >
                             <Text color="gray.500" fontSize="2xl" >{index.description}</Text>
                         </Box>
                     </Grid>
                 <Grid item sm={12} md={6}>
-                    <Wrap  p={25} >
+                    <Wrap p={25} >
                     {index.data.map(sc => (
                         <WrapItem>
                             <motion.img
