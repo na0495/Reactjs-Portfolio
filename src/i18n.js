@@ -1,6 +1,6 @@
 import i18n from "i18next";
 import detector from "i18next-browser-languagedetector";
-import { reactI18nextModule } from "react-i18next";
+import { initReactI18next } from 'react-i18next';
 
 import translationEN from './locales/en.json';
 import translationFR from './locales/fr.json';
@@ -22,11 +22,14 @@ const resources = {
 
 i18n
   .use(detector)
-  .use(reactI18nextModule) // passes i18n down to react-i18next
+  .use(initReactI18next)// passes i18n down to react-i18next
   .init({
     resources,
+    lng: localStorage.getItem('i18nextLng') || 'en',
     fallbackLng: "en", // use en if detected lng is not available
-
+    debug: false,
+    ns: ['translations'],
+    defaultNS: 'translations',
     keySeparator: false, // we do not use keys in form messages.welcome
 
     interpolation: {
