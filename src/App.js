@@ -7,6 +7,7 @@ import ProjectPage from './pages/ProjectPage'
 import ResumePage from './pages/ResumePage'
 import Footer from './components/home/Footer'
 import SingelPage from "./pages/SingelPage";
+import NotFound from "./pages/NotFound";
 import {
   BrowserRouter as Router,
   Switch,
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/resume" component={ResumePage}/>
           <Route exact path="/project" component={ProjectPage}/>
           <Route exact path="/singelpage" component={SingelPage}/>
+          <Route component={NotFound} />
         </Switch> 
       <Footer/>
     </Router>
