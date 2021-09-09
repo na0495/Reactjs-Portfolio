@@ -10,16 +10,16 @@ import GitHub from './home/GitHub';
 export default function LandingPage() {
     return (
         <>
-          <Particles>
-            <Hero/>
-            <AboutMe/>
+            <Particles>
+              <Hero/>
+              <AboutMe/>
+            </Particles>
             <Work/>
             <Studys/>
             <Tech/>
             <Project/>
             <GitHub/>
             {/* <GitStats/> */}
-          </Particles>
         </>
     )
 
