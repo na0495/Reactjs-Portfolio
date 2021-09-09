@@ -22,7 +22,7 @@ const SwitchMode = props => {
   const text = useColorModeValue("dark", "light");
 
   const [play] = useSound(lightswitch, {
-    volume: 0.05,
+    volume: 0.1,
     sprite: {
       on: [0, 300],
       off: [500, 300]

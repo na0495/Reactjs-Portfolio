@@ -2,18 +2,18 @@ const customColors = {
   transparent: 'transparent',
   black: '#000',
   white: '#F9F6F0',
-  // gray: {
-  //   50: '#F6FAFF',
-  //   100: '#EFF2FB',
-  //   200: '#D9E2EC',
-  //   300: '#BCCCDC',
-  //   400: '#9FB3C8',
-  //   500: '#829AB1',
-  //   600: '#486581',
-  //   700: '#334E68',
-  //   800: '#243B53',
-  //   900: '#102a43'
-  // },
+  gray: {
+    // 50: '#F6FAFF',
+    // 100: '#EFF2FB',
+    // 200: '#D9E2EC',
+    // 300: '#BCCCDC',
+    // 400: '#9FB3C8',
+    // 500: '#829AB1',
+    // 600: '#486581',
+    // 700: '#334E68',
+    800: '#14110f',
+    // 900: '#102a43'
+  },
   primary: {
     50: '#FFE0FF',
     100: '#F8CCFF',
@@ -80,16 +80,20 @@ const customColors = {
       Github: '#F9F6F0',
       card: '#F9FAFC',
       text: '#000',
-      path: '#D6D2C4'
+      path: '#D6D2C4',
+      nav: '#d6d6d6',
+      repo: '#ede7e3'
       
       // cardText: '#fff',
     },
     dark: {
-      background: '#102a43',
+      background: '#333533',
       Github: '#F9F6F0',
       card: '#766257',
       text: '#fff',
-      path: '#325171'
+      path: '#325171',
+      nav: '#34312d',
+      repo: '#66635b'
       
       // cardText: '#000',
     }

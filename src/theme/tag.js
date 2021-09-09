@@ -12,7 +12,7 @@ export const getTagColor = type => {
     } else if (type === "chakraui" || type === "css") {
       return "teal";
     } else if (type === "python") {
-      return "bleu";
+      return "#4584b6";
     } else if (type === "php") {
       return "purple";
     }

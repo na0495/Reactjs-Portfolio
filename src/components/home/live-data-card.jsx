@@ -2,6 +2,7 @@ import * as React from "react";
 import {
   Box,
   useColorModeValue,
+  useColorMode,
   VStack,
   Text,
   HStack,
@@ -24,6 +25,7 @@ const RepositoryCard = (props) => {
     stargazers_count,
     forks_count,
   } = props;
+  const { colorMode } = useColorMode();
 
   const handleLinkClick = (e,link) => {
     window.open(link);
@@ -33,13 +35,14 @@ const RepositoryCard = (props) => {
   return (
     <motion.div whileHover={{ y: -5 }}>
       <Box
-        size="xl"
+        size="2xl"
         py={2}
         px={[2, 4]}
         mt={2}
+        m={2}
         rounded="xl"
         borderWidth="1px"
-        bg={useColorModeValue("white", "gray.800")}
+        bg={`mode.${colorMode}.repo`}
         borderColor={useColorModeValue("gray.100", "gray.700")}
         _hover={{
           shadow: "lg",

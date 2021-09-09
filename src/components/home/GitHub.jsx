@@ -35,7 +35,7 @@ function GitHub() {
     const { colorMode } = useColorMode();
   return (
     <Center>
-      <Box p={25} backgroundColor={`mode.${colorMode}.background`} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16" w="75%">
+      <Box p={25} backgroundColor={`mode.${colorMode}.background`} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16" w={["100%", "100%", "80%"]}>
         <Heading variant="h4" className={classes.heading}>
           GitHub contributation Calander
         </Heading>

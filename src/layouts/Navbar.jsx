@@ -5,6 +5,7 @@ import {
   Link,
   IconButton,
   useDisclosure,
+  useColorMode,
   useColorModeValue,
   Stack,
 } from '@chakra-ui/react';
@@ -28,7 +29,12 @@ const Links = [
 {
   name: 'Resume',
   path: '/resume'
-}];
+},
+{
+  name: 'Project',
+  path: '/project'
+}
+];
 
 const NavLink = ({ name, path }) => (
   <Link
@@ -49,10 +55,11 @@ const NavLink = ({ name, path }) => (
 
 export default function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { colorMode } = useColorMode();
 
   return (
     <>
-      <Box  px={4}>
+      <Box  px={4} backgroundColor={`mode.${colorMode}.nav`} boxShadow="dark-lg" shadow="md">
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
