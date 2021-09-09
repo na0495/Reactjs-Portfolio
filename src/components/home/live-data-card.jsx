@@ -40,6 +40,7 @@ const RepositoryCard = (props) => {
         px={[2, 4]}
         mt={2}
         m={2}
+        minHeight="124px"
         rounded="xl"
         borderWidth="1px"
         bg={`mode.${colorMode}.repo`}
