@@ -7,7 +7,7 @@ export default function Tech() {
     const frontFramework = ['react', 'angular', 'redux', 'bootstrap', 'tailwind']
     const backFramework = ['django', 'django-rest-framework', 'laravel']
     const dataBase = ['postgresql', 'mysql', 'sqlite']
-    const devops = ['git', 'github','netlify', 'google_cloud' ,'docker', 'kubernetes', 'aws', 'heroku']
+    const devops = ['git', 'github','netlify', 'google_cloud' ,'docker'] //, 'kubernetes', 'aws', 'heroku'
     const programming = ['python', 'js', 'typescript', 'html', 'css', 'java', 'c', 'c++', 'php', 'golang', 'bash']
 
     const skillsData = [
