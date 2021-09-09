@@ -10,7 +10,7 @@ export default function AboutMe() {
         <Center>
           <Box p={50} backgroundColor={`mode.${colorMode}.background`} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16" w={["100%", "75%"]}>
               <Fade bottom cascade delay={1000}>
-                  <Heading as="h3" size="lg" mb={30}>
+                  <Heading as="h3" size="lg" color="orange" mb={30}>
                     Let me introduce myself
                   </Heading>
               </Fade>
