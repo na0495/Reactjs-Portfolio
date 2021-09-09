@@ -8,9 +8,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import './icon.css'
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    height: window.innerHeight - 250
-  },
   icons: {
     padding: theme.spacing(3),
     fontSize: '2rem',
@@ -42,7 +39,7 @@ export default function Home() {
   const classes = useStyles();
 
   return (
-    <Box className={classes.root}>
+    <Box pb={25}>
     <Grid container  >
       <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
           <Box className={classes.avatar}>

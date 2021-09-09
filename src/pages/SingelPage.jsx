@@ -13,7 +13,7 @@ export default function SingelPage() {
     return (
         <>
             <Particles>
-              <Box pb={100} mb={250}>
+              <Box pb={100} mb={200}>
                 <Hero/>
               </Box>
             </Particles>
