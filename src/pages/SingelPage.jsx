@@ -6,14 +6,15 @@ import Studys from '../components/home/Studys';
 import Tech from '../components/home/Tech';
 import Project from '../components/home/Project';
 import GitHub from '../components/home/GitHub';
-import { Box } from '@chakra-ui/react';
+import { Box, Button, Center } from '@chakra-ui/react';
 
 export default function SingelPage() {
+  const scrollTop = () => window.scrollTo({ top: 0 })
 
     return (
         <>
             <Particles>
-              <Box pb={100} mb={200}>
+              <Box pb={100} mb={100}>
                 <Hero/>
               </Box>
             </Particles>
@@ -25,6 +26,11 @@ export default function SingelPage() {
             <Tech/>
             <Project/>
             <GitHub/>
+            <Center>
+              <Button size="lg" ml={5} mt={10} colorScheme="yellow" onClick={scrollTop}>
+                Go Back Top
+              </Button>
+            </Center>
         </>
     )
 

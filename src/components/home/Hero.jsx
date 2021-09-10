@@ -2,7 +2,8 @@ import * as React from "react";
 import useLocales from "../../hooks/useLocales";
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion } from 'framer-motion'
-import { Heading } from '@chakra-ui/react';
+import { Heading, Button } from '@chakra-ui/react';
+import { Link, useLocation  } from 'react-router-dom';
 import { Grid, Box, Avatar } from '@material-ui/core';
 import { SplitText } from '../Animation/SplitText';
 import Type from '../Animation/Type';
@@ -43,6 +44,8 @@ export default function Home() {
   // eslint-disable-next-line
   const { t, i18n } = useTranslation();
   const classes = useStyles();
+  const location = useLocation();
+  const isSingelPage = location.pathname === '/singelpage';
 
   return (
     <Box pb={25}>
@@ -94,9 +97,10 @@ export default function Home() {
             <Type/>
           </Heading>
         </Box>
-        {/* <Button colorScheme="teal" size="lg" ml={5} mt={5} colorScheme="yellow">
-          Find Out More
-        </Button> */}
+          {!isSingelPage &&
+            <Button size="lg" ml={5} mt={5} colorScheme="yellow">
+              <Link to="/singelpage">View the full portfolio</Link>
+            </Button>}
         </Grid>
       </Grid>
       </Box>
