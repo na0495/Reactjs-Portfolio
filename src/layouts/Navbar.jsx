@@ -13,6 +13,19 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
 import SwitchMode from './SwitchMode';
 import LanguagePopover from './LanguagePopover';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => ({
+  nav: {
+    backdropFilter: 'blur(50px)',
+    position: '-webkit-sticky', 
+    // eslint-disable-next-line
+    position: 'sticky', 
+    top: '0',
+    textAlign: 'right',
+    zIndex: 3,
+  }
+}));
 
 const Links = [
 {
@@ -60,11 +73,13 @@ const NavLink = ({ name, path }) => (
 
 export default function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  // eslint-disable-next-line
   const { colorMode } = useColorMode();
+  const classes = useStyles();
 
   return (
     <>
-      <Box  px={4} backgroundColor={`mode.${colorMode}.nav`} boxShadow="dark-lg" shadow="md">
+      <Box  px={4} className={classes.nav}  boxShadow="dark-lg" shadow="md">
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
