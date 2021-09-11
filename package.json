@@ -66,6 +66,7 @@
     "@iconify-icons/fluent": "^1.1.22",
     "@iconify-icons/ic": "^1.1.7",
     "@iconify-icons/icon-park": "^1.1.0",
-    "@iconify/react": "^1.1.4"
+    "@iconify/react": "^1.1.4",
+    "json-loader": "^0.5.7"
   }
 }

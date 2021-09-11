@@ -1,6 +1,5 @@
 import * as React from "react";
 import useLocales from "../../hooks/useLocales";
-import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion } from 'framer-motion'
 import { Heading, Button, ButtonGroup  } from '@chakra-ui/react';
 import { Link, useLocation  } from 'react-router-dom';
@@ -42,8 +41,6 @@ const useStyles = makeStyles((theme) => ({
 export default function Home() {
   // eslint-disable-next-line
   const { translate } = useLocales();
-  // eslint-disable-next-line
-  const { t, i18n } = useTranslation();
   const classes = useStyles();
   const location = useLocation();
   const isSingelPage = location.pathname === '/singelpage';
@@ -68,7 +65,8 @@ export default function Home() {
       <Grid item sx={12} sm={12} md={7} lg={7} xl={7}>
         <Box className={classes.box} >
           <Heading as="h2" size="3xl"  isTruncated p={4}>
-            {t('hello')} <span className="waving-hand">&#128075;</span>
+            {translate('hello')}
+            Hello there <span className="waving-hand">&#128075;</span>
           </Heading>
           <AnimatePresence>
             <motion.div

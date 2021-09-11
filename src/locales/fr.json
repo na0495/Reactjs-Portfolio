@@ -1,7 +1,8 @@
 {
+    "hello": "Hello there",
     "type": {
-        "software_developer": "Développeur de logiciels",
-        "full_stack": "Développeur Full Stack",
-        "open_source": "Contributeur Open Source"
+        "software_developer": "Softwareentwickler",
+        "full_stack": "Full-Stack-Entwickler",
+        "open_source": "Open-Source-Mitwirkender"
     }
 }

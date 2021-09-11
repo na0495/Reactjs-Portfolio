@@ -1,8 +1,10 @@
 {
-    "type": {
-        "software_developer": "Software Developer",
-        "full_stack": "Full Stack Developer",
-        "open_source": "Open Source Contributor"
+    "hello": {
+        "hello": "Hello there"
     },
-    "hello": "Hello there"
+    "type": {
+        "software_developer": "Softwareentwickler",
+        "full_stack": "Full-Stack-Entwickler",
+        "open_source": "Open-Source-Mitwirkender"
+    }
 }

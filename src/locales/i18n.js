@@ -10,7 +10,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    resources : {
+    resources: {
       en: {
         translation: translationEN
       },
@@ -23,7 +23,7 @@ i18n
     },
     lng: localStorage.getItem('i18nextLng') || 'en',
     fallbackLng: "en", // use en if detected lng is not available
-    debug: false,
+    debug: true,
     ns: ['translations'],
     defaultNS: 'translations',
     interpolation: {
