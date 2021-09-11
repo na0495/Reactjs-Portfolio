@@ -8,13 +8,13 @@ export default function AboutMe() {
       <Fade bottom cascade delay={300} >
         <Stack spacing={12}>
         <Center>
-          <Box p={50} backgroundColor={`mode.${colorMode}.background`} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16" w={["100%", "75%"]}>
-              <Fade bottom cascade delay={1000}>
+          <Box p={25} backgroundColor={`mode.${colorMode}.background`} boxShadow="dark-lg" shadow="md" borderWidth="1px"  borderRadius="16" w={["100%", "75%"]}>
+              <Fade cascade delay={1000}>
                   <Heading as="h3" size="lg" color="orange" mb={30}>
                     Let me introduce myself
                   </Heading>
               </Fade>
-              <Fade bottom cascade delay={1500}>
+              <Fade cascade delay={1500}>
                 <div>
                   <h2 className="text"><span className='icons'>&#129333;</span>  I'm is Mrabet saad, a 23 years old, from Tangier morocco.</h2>
                   <h2 className="text"><span className='icons'>&#127891;</span>  I just completed my bachelor's degree in Computer Engineering this year.</h2>

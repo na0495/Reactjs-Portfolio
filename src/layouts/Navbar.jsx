@@ -22,7 +22,6 @@ const useStyles = makeStyles(theme => ({
     // eslint-disable-next-line
     position: 'sticky', 
     top: '0',
-    textAlign: 'right',
     zIndex: 3,
   }
 }));
