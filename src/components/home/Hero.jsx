@@ -2,12 +2,13 @@ import * as React from "react";
 import useLocales from "../../hooks/useLocales";
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion } from 'framer-motion'
-import { Heading, Button } from '@chakra-ui/react';
+import { Heading, Button, ButtonGroup  } from '@chakra-ui/react';
 import { Link, useLocation  } from 'react-router-dom';
 import { Grid, Box, Avatar } from '@material-ui/core';
 import { SplitText } from '../Animation/SplitText';
 import Type from '../Animation/Type';
 import { makeStyles } from '@material-ui/core/styles';
+import CV from '../../assets/mrabetsaad.pdf'
 import './icon.css'
 
 const useStyles = makeStyles((theme) => ({
@@ -97,10 +98,15 @@ export default function Home() {
             <Type/>
           </Heading>
         </Box>
+        <ButtonGroup  size="lg"  variant="solid" ml={5} mt={5} spacing="6">
+          <Button colorScheme="green"> 
+            <a href={CV} download>download cv</a>
+          </Button>
           {!isSingelPage &&
-            <Button size="lg" ml={5} mt={5} colorScheme="yellow">
-              <Link to="/singelpage">View the full portfolio</Link>
+            <Button colorScheme="yellow">
+              <Link to="/singelpage">Discover full portfolio</Link>
             </Button>}
+        </ButtonGroup>
         </Grid>
       </Grid>
       </Box>

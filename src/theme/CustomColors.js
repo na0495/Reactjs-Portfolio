@@ -62,18 +62,18 @@ const customColors = {
     800: '#93650A',
     900: '#7A5006'
   },
-  green: {
-    50: '#DFFFEE',
-    100: '#CBFEDA',
-    200: '#97FDC1',
-    300: '#63F9AF',
-    400: '#3DF4AB',
-    500: '#00EDA6',
-    600: '#00CBA2',
-    700: '#00AA98',
-    800: '#008988',
-    900: '#006771'
-  },
+  // green: {
+  //   50: '#DFFFEE',
+  //   100: '#CBFEDA',
+  //   200: '#97FDC1',
+  //   300: '#63F9AF',
+  //   400: '#3DF4AB',
+  //   500: '#00EDA6',
+  //   600: '#00CBA2',
+  //   700: '#00AA98',
+  //   800: '#008988',
+  //   900: '#006771'
+  // },
   mode: {
     light: {
       background: '#fff',
@@ -83,7 +83,7 @@ const customColors = {
       path: '#D6D2C4',
       nav: '#d6d6d6',
       repo: '#ede7e3'
-      
+
       // cardText: '#fff',
     },
     dark: {
@@ -94,7 +94,7 @@ const customColors = {
       path: '#325171',
       nav: '#34312d',
       repo: '#66635b'
-      
+
       // cardText: '#000',
     }
   }
