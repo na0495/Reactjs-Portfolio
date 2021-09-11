@@ -20,8 +20,10 @@ export default function SingelPage() {
             </Particles>
             <AboutMe/>
             <Particles>
-              <Work/>
-              <Studys/>
+              <Box pb={100} mb={100}>
+                <Work/>
+                <Studys/>
+              </Box>
             </Particles>
             <Tech/>
             <Project/>
