@@ -12,7 +12,7 @@ import {
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
 import SwitchMode from './SwitchMode';
-import LanguagePopover from './LanguagePopover';
+// import LanguagePopover from './LanguagePopover';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
@@ -98,7 +98,7 @@ export default function NavBar() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-            <LanguagePopover />
+            {/* <LanguagePopover /> */}
             <SwitchMode/>
             <NavLink  name='Singel page' path='/singelpage'>Singel page</NavLink>
           </Flex>

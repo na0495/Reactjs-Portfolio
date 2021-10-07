@@ -9,7 +9,7 @@ export default function Tech() {
     const frontFramework = ['react', 'angular', 'redux', 'bootstrap', 'tailwind']
     const backFramework = ['django', 'django-rest-framework', 'laravel']
     const dataBase = ['postgresql', 'mysql', 'sqlite']
-    const devops = ['git', 'github','netlify', 'google_cloud' ,'docker'] //, 'kubernetes', 'aws', 'heroku'
+    const devops = ['git', 'github', 'azure','netlify', 'google_cloud' ,'docker', 'heroku'] //, 'kubernetes', 'aws', 'heroku'
     const programming = ['python', 'js', 'typescript', 'html', 'css', 'java', 'c', 'c++', 'php', 'golang', 'bash']
 
     const skillsData = [
@@ -35,7 +35,7 @@ export default function Tech() {
         },
         {
             title: 'DevOps',
-            description: "I'm very familiar with working with remote repository on Github using git version control with speed and efficiency, as for for devOps i'm still a beginner i don't have to much knowlege and experience yet, i do use a lot netlify to deploy current app for demo purpose, but i'm still learning devOps technologies as docker & kubernetes, and finaly i will say that i'm use to work with contabo & google cloud servers, and trying to learn Aws ...",
+            description: "I'm very familiar with working with remote repository on Github & Azure using git version control with speed and efficiency, as for devOps i'm still a beginner i don't have to much knowlege and experience yet, i do use a lot netlify to deploy current app for demo purpose, but i'm still learning devOps technologies as docker & kubernetes, and finaly i will say that i'm use to work with contabo & google cloud servers, and trying to learn Aws ...",
             data: devops,
         },
 
