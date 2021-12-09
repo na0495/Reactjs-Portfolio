@@ -65,7 +65,6 @@ export default function Home() {
       <Grid item sx={12} sm={12} md={7} lg={7} xl={7}>
         <Box className={classes.box} >
           <Heading as="h2" size="3xl"  isTruncated p={4}>
-            {translate('hello')}
             Hello there <span className="waving-hand">&#128075;</span>
           </Heading>
           <AnimatePresence>
