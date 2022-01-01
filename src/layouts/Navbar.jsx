@@ -16,7 +16,7 @@ import { makeStyles } from '@material-ui/core/styles';
 // settings
 import SwitchMode from './SwitchMode';
 import MusicSwitch from './MusicSwitch';
-import LanguagePopover from './LanguagePopover';
+// import LanguagePopover from './LanguagePopover';
 import navConfig from '../configs/nav-config';
 // import { useTranslation } from 'react-i18next';
 
@@ -79,7 +79,7 @@ export default function NavBar() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-            <LanguagePopover/>
+            {/* <LanguagePopover/> */}
             <MusicSwitch/>
             <SwitchMode/>
             <NavLink  name='Singel page' path='/singelpage'>Singel page</NavLink>
