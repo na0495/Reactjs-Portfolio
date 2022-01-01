@@ -1,8 +1,17 @@
 {
-    "hello": "Hello there",
+    "hello": "Bonjour",
     "type": {
-        "software_developer": "Softwareentwickler",
-        "full_stack": "Full-Stack-Entwickler",
-        "open_source": "Open-Source-Mitwirkender"
+        "software_developer": "Développeur logiciel",
+        "full_stack": "Full Stack développeur",
+        "open_source": "Open Source contributor"
+    },
+    "Nav": {
+        "home": "Accueil",
+        "aboutme": "À propos de moi",
+        "skill": "Compétences",
+        "resume": "Parcours",
+        "openSource": "Open Source",
+        "projects": "Projets",
+        "singelpage": "tout en une page"
     }
 }

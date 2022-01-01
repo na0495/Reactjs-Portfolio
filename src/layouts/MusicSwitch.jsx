@@ -2,16 +2,13 @@ import React from 'react';
 // chakra-ui
 import {
   Box,
-  IconButton,
-  useColorModeValue,
-  useColorMode,
+  IconButton
 } from '@chakra-ui/react';
 // icons
-import { FiSun } from 'react-icons/fi';
-import { FaMoon } from 'react-icons/fa';
+import { FaPlay, FaPause } from 'react-icons/fa';
 // sound effects
 import useSound from "use-sound";
-import lightswitch from "../assets/audios/lightswitch.mp3";
+import chill from "../assets/audios/chill.mp3";
 
 
 const iconProps = {
@@ -20,23 +17,18 @@ const iconProps = {
   isRound: true
 };
 
-const SwitchMode = props => {
-  // define color mode & toggle to light / dark mode
-  const { colorMode, toggleColorMode } = useColorMode();
-  const text = useColorModeValue("dark", "light");
+const MusicSwitch = props => {
+
+  // define useState for play or pause
+  const [playMode, setPlayMode] = React.useState(true);
 
   // sound effects on click
-  const [play] = useSound(lightswitch, {
-    volume: 0.1,
-    sprite: {
-      on: [0, 300],
-      off: [500, 300]
-    }
-  });
+  const [play, { stop, isPlaying }] = useSound(chill);
 
   const handleClick = () => {
-    text === "dark" ? play({ id: "on" }) : play({ id: "off" });
-    toggleColorMode();
+    // check the playMode value to play to stop the music
+    playMode ? play() : stop();
+    setPlayMode(!playMode);
   };
 
 
@@ -53,11 +45,11 @@ const SwitchMode = props => {
        }}
       >
         <IconButton
+          active={isPlaying}
           boxShadow="dark-lg"
           aria-label="Color Mode"
           onClick={handleClick}
-          icon={colorMode === 'light' ? <FaMoon /> : <FiSun />}
-          // onClick={toggleColorMode}
+          icon={playMode === true ? <FaPlay /> : <FaPause />}
           size="lg"
           isRound={true}
           {...iconProps}
@@ -68,4 +60,4 @@ const SwitchMode = props => {
   );
 };
 
-export default SwitchMode;
+export default MusicSwitch;

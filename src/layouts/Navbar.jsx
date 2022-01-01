@@ -1,3 +1,5 @@
+import { Link as RouterLink } from 'react-router-dom';
+// chakra-ui
 import {
   Box,
   Flex,
@@ -5,15 +7,18 @@ import {
   Link,
   IconButton,
   useDisclosure,
-  useColorMode,
   useColorModeValue,
   Stack,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import { Link as RouterLink } from 'react-router-dom';
-import SwitchMode from './SwitchMode';
-// import LanguagePopover from './LanguagePopover';
+// mui
 import { makeStyles } from '@material-ui/core/styles';
+// settings
+import SwitchMode from './SwitchMode';
+import MusicSwitch from './MusicSwitch';
+import LanguagePopover from './LanguagePopover';
+import navConfig from '../configs/nav-config';
+// import { useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles(theme => ({
   nav: {
@@ -26,32 +31,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Links = [
-{
-  name: 'Home',
-  path: '/'
-},
-{
-  name: 'About me',
-  path: '/aboutme'
-},
-{
-  name: 'Skills',
-  path: '/skills'
-},
-{
-  name: 'Resume',
-  path: '/resume'
-},
-{
-  name: 'Open source',
-  path: '/github'
-},
-{
-  name: 'Project',
-  path: '/project'
-}
-];
+
 
 const NavLink = ({ name, path }) => (
   <Link
@@ -71,10 +51,11 @@ const NavLink = ({ name, path }) => (
 );
 
 export default function NavBar() {
+
   const { isOpen, onOpen, onClose } = useDisclosure();
-  // eslint-disable-next-line
-  const { colorMode } = useColorMode();
   const classes = useStyles();
+  // eslint-disable-next-line
+  // const { t, i18n } = useTranslation();
 
   return (
     <>
@@ -92,13 +73,14 @@ export default function NavBar() {
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
-              {Links.map((link) => (
+              {navConfig.map((link) => (
                 <NavLink key={link.name} name={link.name} path={link.path}>{link.name}</NavLink>
               ))}
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-            {/* <LanguagePopover /> */}
+            <LanguagePopover/>
+            <MusicSwitch/>
             <SwitchMode/>
             <NavLink  name='Singel page' path='/singelpage'>Singel page</NavLink>
           </Flex>
@@ -107,7 +89,7 @@ export default function NavBar() {
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }} >
             <Stack as={'nav'} spacing={4} >
-              {Links.map((link) => (
+              {navConfig.map((link) => (
                 <NavLink key={link.name} name={link.name}  path={link.path}>{link.name}</NavLink>
               ))}
             </Stack>
