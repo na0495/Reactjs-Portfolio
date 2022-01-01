@@ -14,7 +14,7 @@ function App() {
   const [loading, setLoading] = React.useState(true);
   setTimeout(() => {
     setLoading(false);
-  }, 4000);
+  }, 5000);
   return (
     <BoxLoader show={loading} >
       <Router>
