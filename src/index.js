@@ -1,10 +1,11 @@
 import './locales/i18n';
-import React, { Suspense } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import customTheme from './theme/theme';
+import Seo from './components/Seo';
 
 // eslint-disable-next-line
 const newTheme = {
@@ -14,9 +15,8 @@ const newTheme = {
 ReactDOM.render(
   <ChakraProvider theme={newTheme}>
     <CSSReset />
-    <Suspense fallback="loading">
+      <Seo />
       <App />
-    </Suspense>
   </ChakraProvider>,
   document.getElementById('root')
 );
