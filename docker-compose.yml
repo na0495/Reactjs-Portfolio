@@ -1,0 +1,13 @@
+version: "3.5"
+
+services:
+  app:
+    container_name: portfolio_na0495
+    image: portfolio_na0495
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./src:/portfolio/src
+    ports:
+      - 3000:3000
