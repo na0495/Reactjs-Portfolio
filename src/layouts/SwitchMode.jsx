@@ -1,12 +1,15 @@
 import React from 'react';
+// chakra-ui
 import {
   Box,
   IconButton,
   useColorModeValue,
   useColorMode,
 } from '@chakra-ui/react';
+// icons
 import { FiSun } from 'react-icons/fi';
 import { FaMoon } from 'react-icons/fa';
+// sound effects
 import useSound from "use-sound";
 import lightswitch from "../assets/audios/lightswitch.mp3";
 
@@ -18,9 +21,11 @@ const iconProps = {
 };
 
 const SwitchMode = props => {
+  // define color mode & toggle to light / dark mode
   const { colorMode, toggleColorMode } = useColorMode();
   const text = useColorModeValue("dark", "light");
 
+  // sound effects on click
   const [play] = useSound(lightswitch, {
     volume: 0.1,
     sprite: {

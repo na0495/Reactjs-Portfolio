@@ -2,8 +2,8 @@ version: "3.5"
 
 services:
   app:
-    container_name: na0495_portfolio
-    image: na0495_portfolio
+    container_name: na0495_portfolio_v1
+    image: na0495_portfolio_v1
     build:
       context: .
       target: development

@@ -11,6 +11,9 @@ import CV from '../../assets/mrabetsaad.pdf'
 import './icon.css'
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    height: window.innerHeight / 1.8,
+  },
   icons: {
     padding: theme.spacing(3),
     fontSize: '2rem',
@@ -39,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function Home() {
+
   // eslint-disable-next-line
   const { translate } = useLocales();
   const classes = useStyles();
@@ -47,7 +51,7 @@ export default function Home() {
 
   return (
     <Box pb={25}>
-    <Grid container  >
+    <Grid container className={classes.root} >
       <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
           <Box className={classes.avatar}>
         <motion.div   
@@ -96,7 +100,7 @@ export default function Home() {
           </Heading>
         </Box>
         <ButtonGroup  size="lg"  variant="solid" ml={5} mt={5} spacing="6">
-          <Button colorScheme="green"> 
+          <Button colorScheme="orange"> 
             <a href={CV} download>download cv</a>
           </Button>
           {!isSingelPage &&
