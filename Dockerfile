@@ -4,11 +4,11 @@ ENV NODE_ENV development
 WORKDIR /portfolio
 # Cache and Install dependencies
 COPY package.json .
-COPY yarn.lock .
-RUN yarn install
+COPY package-lock.json .
+RUN npm install
 # Copy app files
 COPY . .
 # Expose port
-EXPOSE 3000
+EXPOSE 4000
 # Start the app
-CMD [ "yarn", "start" ]
+CMD [ "npm", "start" ]
