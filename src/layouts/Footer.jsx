@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stack, IconButton, Link, Heading, Center, Box, useColorMode } from '@chakra-ui/react';
-import siteConfig from '../../configs/site-config';
+import siteConfig from '../configs/site-config';
 import { makeStyles } from '@material-ui/core/styles';
 
 const iconProps = {
