@@ -1,20 +1,11 @@
 import { Suspense, lazy } from 'react';
 import { useRoutes } from 'react-router-dom';
-// import { Spinner } from '@chakra-ui/react';
+import { BoxLoader } from '../components/Animation/BoxLoader';
 
 const Loadable = (Component) => (props) => {
-    //Todod: add loading spinner in Suspense
-    // fallback=
-    //     {<Spinner
-    //         thickness='6px'
-    //         speed='0.75s'
-    //         emptyColor='gray.100'
-    //         color='orange.300'
-    //         size='xl'
-    //     />}
   
     return (
-      <Suspense fallback="loading">
+      <Suspense fallback={<BoxLoader/>}>
         <Component {...props} />
       </Suspense>
     );
