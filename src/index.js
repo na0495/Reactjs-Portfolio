@@ -1,5 +1,5 @@
 import './locales/i18n';
-import React, { Suspense } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -14,9 +14,9 @@ const newTheme = {
 ReactDOM.render(
   <ChakraProvider theme={newTheme}>
     <CSSReset />
-    <Suspense fallback="loading">
+    {/* <Suspense fallback="loading"> */}
       <App />
-    </Suspense>
+    {/* </Suspense> */}
   </ChakraProvider>,
   document.getElementById('root')
 );
