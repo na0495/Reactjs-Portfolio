@@ -1,14 +1,19 @@
 import * as React from "react";
-import useLocales from "../../hooks/useLocales";
-import { AnimatePresence, motion } from 'framer-motion'
-import { Heading, Button, ButtonGroup  } from '@chakra-ui/react';
 import { Link, useLocation  } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion'
+// Material UI & chakra-ui
+import { Heading, Button, ButtonGroup  } from '@chakra-ui/react';
 import { Grid, Box, Avatar } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+// Animation
 import { SplitText } from '../Animation/SplitText';
 import Type from '../Animation/Type';
-import { makeStyles } from '@material-ui/core/styles';
+// static assets
+import soundUrl from "../../assets/audios/rising-pops.mp3";
 import CV from '../../assets/mrabetsaad.pdf'
 import './icon.css'
+// sound effects
+import useSound from 'use-sound';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,10 +49,19 @@ const useStyles = makeStyles((theme) => ({
 export default function Home() {
 
   // eslint-disable-next-line
-  const { translate } = useLocales();
+  // const { translate } = useLocales();
   const classes = useStyles();
   const location = useLocation();
   const isSingelPage = location.pathname === '/singelpage';
+
+  const [play, { stop }] = useSound(
+    soundUrl,
+    { volume: 0.5 }
+  );
+
+  const [isHovering, setIsHovering] = React.useState(
+    false
+  );
 
   return (
     <Box pb={25}>
@@ -101,11 +115,19 @@ export default function Home() {
         </Box>
         <ButtonGroup  size="lg"  variant="solid" ml={5} mt={5} spacing="6">
           <Button colorScheme="orange"> 
-            <a href={CV} download>download cv</a>
+            <a href={CV} download>Download cv</a>
           </Button>
           {!isSingelPage &&
-            <Button colorScheme="yellow">
-              <Link to="/singelpage">Discover full portfolio</Link>
+            <Button colorScheme="yellow"
+              onMouseEnter={() => {
+                setIsHovering(true);
+                play();
+              }}
+              onMouseLeave={() => {
+                setIsHovering(false);
+                stop();
+              }}>
+              <Link to="/singelpage" isHovering={isHovering}>Discover full portfolio</Link>
             </Button>}
         </ButtonGroup>
         </Grid>

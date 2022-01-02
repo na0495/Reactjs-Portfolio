@@ -1,11 +1,11 @@
 import { Suspense, lazy } from 'react';
 import { useRoutes } from 'react-router-dom';
-import { BoxLoader } from '../components/Animation/BoxLoader';
+import { BoxesLoaderComponent } from '../components/Animation/BoxesLoader';
 
 const Loadable = (Component) => (props) => {
-  
+
     return (
-      <Suspense fallback={<BoxLoader/>}>
+      <Suspense fallback={<BoxesLoaderComponent/>}>
         <Component {...props} />
       </Suspense>
     );

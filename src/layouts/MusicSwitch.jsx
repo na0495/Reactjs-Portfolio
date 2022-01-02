@@ -23,8 +23,8 @@ const MusicSwitch = props => {
   const [playMode, setPlayMode] = React.useState(true);
 
   // sound effects on click
-  const [play, { stop, isPlaying }] = useSound(chill);
-
+  const [play, { stop }] = useSound(chill);
+  
   const handleClick = () => {
     // check the playMode value to play to stop the music
     playMode ? play() : stop();
@@ -45,7 +45,6 @@ const MusicSwitch = props => {
        }}
       >
         <IconButton
-          active={isPlaying}
           boxShadow="dark-lg"
           aria-label="Color Mode"
           onClick={handleClick}
