@@ -23,7 +23,7 @@ i18n
     },
     lng: localStorage.getItem('i18nextLng') || 'en',
     fallbackLng: "en", // use en if detected lng is not available
-    debug: true,
+    debug: false,
     ns: ['translations'],
     defaultNS: 'translations',
     interpolation: {

@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link, useLocation  } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion'
 // Material UI & chakra-ui
-import { Heading, Button, ButtonGroup  } from '@chakra-ui/react';
+import { Heading, Button, ButtonGroup } from '@chakra-ui/react';
 import { Grid, Box, Avatar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 // Animation
@@ -49,8 +49,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home() {
 
-  // eslint-disable-next-line
-  // const { translate } = useLocales();
   const classes = useStyles();
   const location = useLocation();
   const isSingelPage = location.pathname === '/singelpage';
@@ -60,6 +58,7 @@ export default function Home() {
     { volume: 0.5 }
   );
 
+  // eslint-disable-next-line
   const [isHovering, setIsHovering] = React.useState(
     false
   );
@@ -115,11 +114,11 @@ export default function Home() {
           </Heading>
         </Box>
         <ButtonGroup  size="lg"  variant="solid" ml={5} mt={5} spacing="6">
-          <Button colorScheme="orange"> 
-            <a href={CV} download>Download cv</a>
-          </Button>
+          <Button colorScheme="teal" href={CV} download > Download cv </Button>
           {!isSingelPage &&
-            <Button colorScheme="yellow"
+            <Button 
+              component={Link} to="/singelpage"
+              colorScheme="orange"
               onMouseEnter={() => {
                 setIsHovering(true);
                 play();
@@ -128,8 +127,7 @@ export default function Home() {
                 setIsHovering(false);
                 stop();
               }}>
-              <Link to="/singelpage" isHovering={isHovering}>Discover full portfolio</Link>
-            </Button>}
+            Discover full portfolio</Button>}
         </ButtonGroup>
         </Grid>
       </Grid>
