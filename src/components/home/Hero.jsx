@@ -18,6 +18,7 @@ import useSound from 'use-sound';
 const useStyles = makeStyles((theme) => ({
   root: {
     height: window.innerHeight / 1.8,
+    marginBottom: 250,
   },
   icons: {
     padding: theme.spacing(3),
