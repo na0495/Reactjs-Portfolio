@@ -1,0 +1,61 @@
+[
+    {
+       "title":"Programming languages",
+       "description":"Those are the programming langauges that i'm most familiar with, i'm very fluent \n in programming on either Python or JavaScript/TypeScript, in other hand you can't do much in web dev with out knowing HTML/CSS, and finaly i have a small knowlege working with Java, C++ & C",
+       "data":[
+          "python",
+          "js",
+          "typescript",
+          "html",
+          "css",
+          "java",
+          "c",
+          "c++",
+          "php",
+          "golang",
+          "bash"
+       ]
+    },
+    {
+       "title":"Front-end Framework",
+       "description":"I had have multiple work with different framework and librarys in front-end development, i did work with React Javascript library alongside Redux, and i also hade the chance to work with Angular Framework, and styling framework as Boostrap 4/5 & recently tailwind.",
+       "data":[
+          "react",
+          "angular",
+          "redux",
+          "bootstrap",
+          "tailwind"
+       ]
+    },
+    {
+       "title":"Back-end Framework",
+       "description":"For the Back-end side development, i did work with Laravel framework back in the past when i was studying mybachelor degree, but now i'm mainly working with Django framework alongside many librarys and framework, as Django rest framework based on python, like django filter, All Auth, Jwt and many others ...",
+       "data":[
+          "django",
+          "django-rest-framework",
+          "laravel"
+       ]
+    },
+    {
+       "title":"DataBase",
+       "description":"In any project i will work on, my database base of choice will be Postgres, and also i worked in the past with SQLite & MySQL.",
+       "data":[
+          "postgresql",
+          "mysql",
+          "sqlite"
+       ]
+    },
+    {
+       "title":"DevOps",
+       "description":"I'm very familiar with working with remote repository on Github & Azure using git version control with speed and efficiency, as for devOps i'm still a beginner i don't have to much knowlege and experience yet, i do use a lot netlify to deploy current app for demo purpose, but i'm still learning devOps technologies as docker & kubernetes, and finaly i will say that i'm use to work with contabo & google cloud servers, and trying to learn Aws ...",
+       "data":[
+          "git",
+          "github",
+          "azure",
+          "netlify",
+          "google_cloud",
+          "docker",
+          "heroku"
+       ]
+    }
+ ]
