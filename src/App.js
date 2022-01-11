@@ -7,25 +7,18 @@ import Footer from './layouts/Footer';
 // routes
 import MainRouter from './routes/index';
 import { BrowserRouter as Router } from "react-router-dom";
-import { BoxLoader } from './components/Animation/BoxLoader';
 
 function App() {
-  // display BoxLoader when loading
-  const [loading, setLoading] = React.useState(true);
-  setTimeout(() => {
-    setLoading(false);
-  }, 5000);
+
   return (
-    <BoxLoader show={loading} >
-      <Router>
-        <Fragment>
-          <ScrollToTop />
-          <Navbar/>
-          <MainRouter/>
-          <Footer/>
-        </Fragment>
-      </Router>
-    </BoxLoader>
+    <Router>
+      <Fragment>
+        <ScrollToTop />
+        <Navbar/>
+        <MainRouter/>
+        <Footer/>
+      </Fragment>
+    </Router>
   );
 }
 

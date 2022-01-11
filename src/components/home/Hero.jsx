@@ -18,7 +18,11 @@ import useSound from 'use-sound';
 const useStyles = makeStyles((theme) => ({
   root: {
     height: window.innerHeight / 1.8,
-    marginBottom: 250,
+    // if it mobile, it will be smaller
+    [theme.breakpoints.down('sm')]: {
+      // height: window.innerHeight / 2.5,
+      marginBottom: 250,
+    }
   },
   icons: {
     padding: theme.spacing(3),
