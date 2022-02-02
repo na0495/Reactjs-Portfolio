@@ -16,7 +16,7 @@ export default function AboutMe() {
               </Fade>
               <Fade cascade delay={1500}>
                 <div>
-                  <h2 className="text"><span className='icons'>&#129333;</span>  I'm is Mrabet saad, a 23 years old, from Tangier morocco.</h2>
+                  <h2 className="text"><span className='icons'>&#129333;</span>  I'm Mrabet saad, a 23 years old, from Tangier morocco.</h2>
                   <h2 className="text"><span className='icons'>&#127891;</span>  I just completed my bachelor's degree in Computer Engineering this year.</h2>
                   <h2 className="text"><span className='icons'>&#127919;</span>  I enjoy being challenged and engaging with projects that require me to work outside my comfort
                   zone and knowledge set, as continuing to learn new languages and development techniques.</h2>
