@@ -13,8 +13,6 @@ import './icon.css'
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: 125,
-    height: window.innerHeight / 2,
-    // if it mobile, it will be smaller
     [theme.breakpoints.down('sm')]: {
       marginBottom: 250,
     }
