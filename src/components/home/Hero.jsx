@@ -1,26 +1,21 @@
 import * as React from "react";
-import { Link, useLocation  } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion'
 // Material UI & chakra-ui
-import { Heading, Button, ButtonGroup } from '@chakra-ui/react';
+import { Heading } from '@chakra-ui/react';
 import { Grid, Box, Avatar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 // Animation
 import { SplitText } from '../Animation/SplitText';
 import Type from '../Animation/Type';
 // static assets
-import soundUrl from "../../assets/audios/rising-pops.mp3";
-import CV from '../../assets/mrabetsaad.pdf'
 import './icon.css'
-// sound effects
-import useSound from 'use-sound';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: window.innerHeight / 1.8,
+    marginTop: 125,
+    height: window.innerHeight / 2,
     // if it mobile, it will be smaller
     [theme.breakpoints.down('sm')]: {
-      // height: window.innerHeight / 2.5,
       marginBottom: 250,
     }
   },
@@ -54,18 +49,6 @@ const useStyles = makeStyles((theme) => ({
 export default function Home() {
 
   const classes = useStyles();
-  const location = useLocation();
-  const isSingelPage = location.pathname === '/singelpage';
-
-  const [play, { stop }] = useSound(
-    soundUrl,
-    { volume: 0.5 }
-  );
-
-  // eslint-disable-next-line
-  const [isHovering, setIsHovering] = React.useState(
-    false
-  );
 
   return (
     <Box pb={25}>
@@ -117,22 +100,6 @@ export default function Home() {
             <Type/>
           </Heading>
         </Box>
-        <ButtonGroup  size="lg"  variant="solid" ml={5} mt={5} spacing="6">
-          <Button colorScheme="teal" href={CV} download > Download cv </Button>
-          {!isSingelPage &&
-            <Button 
-              component={Link} to="/singelpage"
-              colorScheme="orange"
-              onMouseEnter={() => {
-                setIsHovering(true);
-                play();
-              }}
-              onMouseLeave={() => {
-                setIsHovering(false);
-                stop();
-              }}>
-            Discover full portfolio</Button>}
-        </ButtonGroup>
         </Grid>
       </Grid>
       </Box>

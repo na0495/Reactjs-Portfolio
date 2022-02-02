@@ -1,4 +1,4 @@
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 // chakra-ui
 import {
   Box,
@@ -18,7 +18,9 @@ import SwitchMode from './SwitchMode';
 import MusicSwitch from './MusicSwitch';
 // import LanguagePopover from './LanguagePopover';
 import navConfig from '../configs/nav-config';
-// import { useTranslation } from 'react-i18next';
+import soundUrl from "../assets/audios/rising-pops.mp3";
+// sound effects
+import useSound from 'use-sound';
 
 const useStyles = makeStyles(theme => ({
   nav: {
@@ -31,29 +33,42 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-
-
-const NavLink = ({ name, path }) => (
-  <Link
-    px={3}
-    py={2}
-    as={RouterLink}
-    to={path}
-    sx={{ fontWeight: 'bold' }}
-    rounded={'md'}
-    _hover={{
-      textDecoration: 'none',
-      bg: useColorModeValue('gray.300', 'gray.700'),
-    }}
-    href={'#'}>
-    {name}
-  </Link>
-);
+const NavLink = ({ name, path }) => {
+  const location = useLocation();
+  const active = path === location.pathname
+  const inactiveColor = useColorModeValue('orange.300', 'yellow.700')
+  const [play] = useSound(
+    soundUrl,
+    { volume: 0.2 }
+  );
+  
+  return (
+    <Link
+      px={3}
+      bg={active ? inactiveColor : undefined}
+      size={active ? 'lg' : 'md'}
+      py={2}
+      as={RouterLink}
+      to={path}
+      sx={{ fontWeight: 'bold' }}
+      rounded={'md'}
+      onClick={() => {
+        play();
+      }}
+      _hover={{
+        textDecoration: 'none',
+        bg: useColorModeValue('orange.100', 'yellow.500'),
+      }}
+      href={'#'}>
+      {name}
+    </Link>
+  )
+};
 
 export default function NavBar() {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const classes = useStyles();
+  const classes = useStyles();  
   // eslint-disable-next-line
   // const { t, i18n } = useTranslation();
 
@@ -82,7 +97,6 @@ export default function NavBar() {
             {/* <LanguagePopover/> */}
             <MusicSwitch/>
             <SwitchMode/>
-            <NavLink  name='Singel page' path='/singelpage'>Singel page</NavLink>
           </Flex>
         </Flex>
 
@@ -90,7 +104,7 @@ export default function NavBar() {
           <Box pb={4} display={{ md: 'none' }} >
             <Stack as={'nav'} spacing={4} >
               {navConfig.map((link) => (
-                <NavLink key={link.name} name={link.name}  path={link.path}>{link.name}</NavLink>
+                <NavLink key={link.name} name={link.name} path={link.path}>{link.name}</NavLink>
               ))}
             </Stack>
           </Box>
