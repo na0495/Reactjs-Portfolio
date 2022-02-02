@@ -8,11 +8,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { SplitText } from '../Animation/SplitText';
 import Type from '../Animation/Type';
 // static assets
-import soundUrl from "../../assets/audios/rising-pops.mp3";
-import CV from '../../assets/mrabetsaad.pdf'
 import './icon.css'
-// sound effects
-import useSound from 'use-sound';
 
 const useStyles = makeStyles((theme) => ({
   root: {

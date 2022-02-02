@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 // chakra-ui
 import {
@@ -38,13 +37,10 @@ const NavLink = ({ name, path }) => {
   const location = useLocation();
   const active = path === location.pathname
   const inactiveColor = useColorModeValue('orange.300', 'yellow.700')
-  const [play, { stop }] = useSound(
+  const [play] = useSound(
     soundUrl,
     { volume: 0.2 }
   );
-
-  // eslint-disable-next-line
-  const [isHovering, setIsHovering] = useState(false);
   
   return (
     <Link
@@ -56,13 +52,8 @@ const NavLink = ({ name, path }) => {
       to={path}
       sx={{ fontWeight: 'bold' }}
       rounded={'md'}
-      onMouseEnter={() => {
-        setIsHovering(true);
+      onClick={() => {
         play();
-      }}
-      onMouseLeave={() => {
-        setIsHovering(false);
-        stop();
       }}
       _hover={{
         textDecoration: 'none',
