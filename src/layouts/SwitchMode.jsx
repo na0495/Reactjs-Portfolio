@@ -1,4 +1,5 @@
 import React from 'react';
+import { AnimatePresence, motion } from 'framer-motion'
 // chakra-ui
 import {
   Box,
@@ -41,30 +42,38 @@ const SwitchMode = props => {
 
 
   return (
-    <>
-      <Box
-        p={4}
-        sx={{ position: '-webkit-sticky', 
-        // eslint-disable-next-line
-        position: 'sticky', 
-        top: '0',
-        textAlign: 'right',
-        zIndex: 3,
-       }}
+    <AnimatePresence exitBeforeEnter initial={false}>
+      <motion.div
+        style={{ display: 'inline-block' }}
+        key={useColorModeValue('light', 'dark')}
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: 20, opacity: 0 }}
+        transition={{ duration: 0.2 }}
       >
-        <IconButton
-          boxShadow="dark-lg"
-          aria-label="Color Mode"
-          onClick={handleClick}
-          icon={colorMode === 'light' ? <FaMoon /> : <FiSun />}
-          // onClick={toggleColorMode}
-          size="lg"
-          isRound={true}
-          {...iconProps}
-        />
-      </Box>
-
-    </>
+        <Box
+          p={4}
+          sx={{ position: '-webkit-sticky', 
+          // eslint-disable-next-line
+          position: 'sticky', 
+          top: '0',
+          textAlign: 'right',
+          zIndex: 3,
+        }}
+        >
+          <IconButton
+            boxShadow="dark-lg"
+            aria-label="Color Mode"
+            onClick={handleClick}
+            icon={colorMode === 'light' ? <FaMoon /> : <FiSun />}
+            // onClick={toggleColorMode}
+            size="lg"
+            isRound={true}
+            {...iconProps}
+          />
+        </Box>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

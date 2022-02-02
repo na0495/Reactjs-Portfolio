@@ -15,7 +15,7 @@ export default function MainRouter() {
     return useRoutes([
         {
             path: '/',
-            element: <LandingPage />
+            element: <SingelPage />
         },
         {
             path: '/aboutme',
@@ -39,7 +39,7 @@ export default function MainRouter() {
         },
         {
             path: '/singelpage',
-            element: <SingelPage />
+            element: <LandingPage />
         },
         {
             path: '/github',
