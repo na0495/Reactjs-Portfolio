@@ -1,5 +1,5 @@
 import Fade from 'react-reveal/Fade';
-import { Center, Stack, Box, useColorMode, Heading} from "@chakra-ui/react"
+import { Center, Stack, Box, useColorMode, Heading, Text} from "@chakra-ui/react"
 import './icon.css'
 import aboutme from '../../_mock/aboutme.json'
   
@@ -11,16 +11,14 @@ export default function About() {
         <Center>
           <Box p={25}  borderRadius="16" w={["100%", "75%"]}>
               <Fade cascade delay={1000}>
-                  <Heading as="h3" size="lg" color="orange" mb={30}>
+                  <Heading s='h2' size='2xl' color="orange" mb={30}>
                     {aboutme.title}
                   </Heading>
               </Fade>
               <Fade cascade delay={1500}>
-                <div>
-                  {aboutme.details.map((item) => ( 
-                    <h2 key={item.id} className="text">{item.text}</h2>
-                  ))}
-                </div>
+                {aboutme.details.map((item) => ( 
+                  <Text key={item.id} className="text"> <span className='icons'>{item.icon}</span>{item.text}</Text>
+                ))}
               </Fade>
           </Box>
         </Center>
