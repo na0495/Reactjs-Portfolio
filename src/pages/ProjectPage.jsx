@@ -1,44 +1,38 @@
-import React from 'react';
-import Particles from '../components/Animation/Particles'
-import { Link } from 'react-router-dom';
-import { Heading, Text} from '@chakra-ui/layout';
-import { makeStyles } from '@material-ui/core';
-import Footer from '../layouts/Footer';
+import React, { useRef } from 'react'
+import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import styles from './styles.module.css'
 
-const useStyles = makeStyles((theme) => ({
-    title: {
-        justifyContent: 'center',
-        alignContent: 'center',
-        display: 'flex',
-    },
-    root: {
-        height: window.innerHeight / 1.3,
-        // center the content
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        // textAlign: 'center',
-        paddingBottom: 175
+const Page = ({ offset, gradient, onClick }) => (
+  <>
+    <ParallaxLayer offset={offset} speed={0.2} onClick={onClick}>
+      <div className={styles.slopeBegin} />
+    </ParallaxLayer>
 
+    <ParallaxLayer offset={offset} speed={0.6} onClick={onClick}>
+      <div className={`${styles.slopeEnd} ${styles[gradient]}`} />
+    </ParallaxLayer>
+
+    <ParallaxLayer className={`${styles.text} ${styles.number}`} offset={offset} speed={0.3}>
+      <span>0{offset + 1}</span>
+    </ParallaxLayer>
+  </>
+)
+
+export default function App() {
+  const parallax = useRef(null)
+
+  const scroll = (to) => {
+    if (parallax.current) {
+      parallax.current.scrollTo(to)
     }
-}));
-
-const Soon = () => {
-    const classes = useStyles();
-    return (
-    <Particles>
-        <div className={classes.root}>
-            <Heading as="h1" size="2xl" className={classes.title} isTruncated p={4} mt={250} >
-                404 - Page Not Found
-            </Heading>
-            <Link to="/" className={classes.title} mb={100} mt={25}>
-                <Text fontSize="3xl" color="orange"> Go Home </Text>
-            </Link>
-        </div>
-        <Footer/>
-    </Particles>
-    );
-};
-
-export default Soon;
+  }
+  return (
+    <div style={{ background: '#dfdfdf' }}>
+      <Parallax className={styles.container} ref={parallax} pages={3} horizontal>
+        <Page offset={0} gradient="pink" onClick={() => scroll(1)} />
+        <Page offset={1} gradient="teal" onClick={() => scroll(2)} />
+        <Page offset={2} gradient="tomato" onClick={() => scroll(0)} />
+      </Parallax>
+    </div>
+  )
+}
