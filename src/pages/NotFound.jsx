@@ -11,8 +11,16 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
     },
     root: {
-        paddingTop: 10,
-        paddingBottom: 150,
+
+        height: window.innerHeight / 1.2,
+        // center the content
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        // textAlign: 'center',
+        paddingBottom: 175
+
     }
 }));
 
@@ -20,14 +28,14 @@ const NotFound = () => {
     const classes = useStyles();
     return (
     <Particles>
-    <div className={classes.root}>
-        <Heading as="h1" size="2xl" className={classes.title} isTruncated p={4} mt={250} >
-            404 - Page Not Found
-        </Heading>
-        <Link to="/" className={classes.title} mb={100} mt={25}>
-            <Text fontSize="3xl" color="orange"> Go Home </Text>
-        </Link>
-    </div>
+        <div className={classes.root}>
+            <Heading as="h1" size="2xl" className={classes.title} isTruncated p={4} mt={250} >
+                404 - Page Not Found
+            </Heading>
+            <Link to="/" className={classes.title} mb={100} mt={25}>
+                <Text fontSize="3xl" color="orange"> Go Home </Text>
+            </Link>
+        </div>
     </Particles>
     );
 };

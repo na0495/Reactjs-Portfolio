@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { useColorModeValue } from '@chakra-ui/react';
-import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
+import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import Hero from '../components/home/Hero';
 import About from '../components/home/About';
 import Particles from '../components/Animation/Particles'
