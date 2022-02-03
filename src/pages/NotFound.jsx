@@ -3,6 +3,7 @@ import Particles from '../components/Animation/Particles'
 import { Link } from 'react-router-dom';
 import { Heading, Text} from '@chakra-ui/layout';
 import { makeStyles } from '@material-ui/core';
+import Footer from '../layouts/Footer';
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -11,8 +12,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
     },
     root: {
-
-        height: window.innerHeight / 1.2,
+        height: window.innerHeight / 1.3,
         // center the content
         display: 'flex',
         flexDirection: 'column',
@@ -36,6 +36,7 @@ const NotFound = () => {
                 <Text fontSize="3xl" color="orange"> Go Home </Text>
             </Link>
         </div>
+        <Footer/>
     </Particles>
     );
 };
