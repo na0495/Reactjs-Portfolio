@@ -77,6 +77,7 @@ const customColors = {
   mode: {
     light: {
       background: '#fff',
+      about: '#F9FAFC',
       Github: '#F9F6F0',
       card: '#F9FAFC',
       text: '#000',
@@ -88,6 +89,7 @@ const customColors = {
     },
     dark: {
       background: '#333533',
+      about: '#766257',
       Github: '#F9F6F0',
       card: '#766257',
       text: '#fff',

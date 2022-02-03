@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import customTheme from './theme/theme';
 import Seo from './components/Seo';
+import './index.css'
 
 // eslint-disable-next-line
 const newTheme = {
