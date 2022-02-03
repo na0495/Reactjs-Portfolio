@@ -53,16 +53,16 @@ export default function Home() {
     <Grid container className={classes.root} >
       <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
           <Box className={classes.avatar}>
-        <motion.div   
-          initial={{ scale: 0 }}
-          animate={{ scale: 2 }}
-          transition={{
-            type: "spring",
-            stiffness: 260,
-            damping: 20
-          }}>
-            <Avatar alt="Mrabet Saad" src={process.env.PUBLIC_URL + 'images/me.png'} className={classes.image} />
-        </motion.div>
+            <motion.div   
+              initial={{ scale: 0 }}
+              animate={{ scale: 2 }}
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 20
+              }}>
+                <Avatar alt="Mrabet Saad" src={process.env.PUBLIC_URL + 'images/me.png'} className={classes.image} />
+            </motion.div>
           </Box>
       </Grid>
       <Grid item sx={12} sm={12} md={7} lg={7} xl={7}>

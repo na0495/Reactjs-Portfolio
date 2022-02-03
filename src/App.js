@@ -3,7 +3,6 @@ import React, { Fragment } from 'react';
 import ScrollToTop from './hooks/useScrollTop';
 // layouts
 import Navbar from './layouts/Navbar';
-import Footer from './layouts/Footer';
 // routes
 import MainRouter from './routes/index';
 import { BrowserRouter as Router } from "react-router-dom";
@@ -16,7 +15,7 @@ function App() {
         <ScrollToTop />
         <Navbar/>
         <MainRouter/>
-        <Footer/>
+        {/* <Footer/> */}
       </Fragment>
     </Router>
   );
