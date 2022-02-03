@@ -21,7 +21,7 @@ export default function SingelPage() {
               <Hero/>
             </Particles>
           </ParallaxLayer>
-          {/* <ParallaxLayer offset={1} speed={2} style={{ backgroundColor: `mode.${colorMode}.about`}} /> */}
+          <ParallaxLayer offset={1} speed={2} style={{ backgroundColor: `mode.${colorMode}.about`}} />
           {/* <ParallaxLayer offset={2} speed={2} style={{ backgroundColor: '#ff6d6d' }} />
           <ParallaxLayer offset={3} speed={2} style={{ backgroundColor: '#ff6d6d' }} />
           <ParallaxLayer offset={4} speed={2} style={{ backgroundColor: '#ff6d6d' }} />
