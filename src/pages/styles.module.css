@@ -13,8 +13,8 @@
   }
   
   .number {
+    margin-left: 25px;
     font-size: 150px;
-    color: #545864;
   }
   
   .number span {
