@@ -13,7 +13,7 @@
   }
   
   .number {
-    font-size: 300px;
+    font-size: 150px;
     color: #545864;
   }
   
@@ -23,7 +23,7 @@
   }
   
   .slopeBegin {
-    background-color: #20232f;
+    /* background-color: #20232f; */
     clip-path: polygon(20% 0, 70% 0, 50% 100%, 0% 100%);
   }
   
@@ -39,8 +39,11 @@
     cursor: pointer;
   }
   
-  .pink {
-    background: linear-gradient(to right, rgb(180, 159, 39) 0%, coral 100%);
+  .lightGreen {
+    background: linear-gradient(to right, #219F94 0%, #219F94 100%);
+  }  
+  .darkGreen {
+    background: linear-gradient(to right, #064635 0%, #F4EEA9 100%);
   }
   
   .teal {
