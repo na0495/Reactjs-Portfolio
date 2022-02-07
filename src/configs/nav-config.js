@@ -20,10 +20,10 @@ const navConfig = [
       name: 'Open source',
       path: '/github'
     },
-    {
-      name: 'Project',
-      path: '/project'
-    }
+    // {
+    //   name: 'Project',
+    //   path: '/project'
+    // }
     ];
 
 export default navConfig;
