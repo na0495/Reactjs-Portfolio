@@ -50,18 +50,18 @@ const customColors = {
     800: '#930064',
     900: '#7A005F'
   },
-  yellow: {
-    50: '#FFFFE6',
-    100: '#FFF8D2',
-    200: '#FFEFA5',
-    300: '#FFE379',
-    400: '#FFD857',
-    500: '#FFC620',
-    600: '#DBA417',
-    700: '#B78310',
-    800: '#93650A',
-    900: '#7A5006'
-  },
+  // yellow: {
+  //   50: '#FFFFE6',
+  //   100: '#FFF8D2',
+  //   200: '#FFEFA5',
+  //   300: '#FFE379',
+  //   400: '#FFD857',
+  //   500: '#FFC620',
+  //   600: '#DBA417',
+  //   700: '#B78310',
+  //   800: '#93650A',
+  //   900: '#7A5006'
+  // },
   // green: {
   //   50: '#DFFFEE',
   //   100: '#CBFEDA',
@@ -77,6 +77,7 @@ const customColors = {
   mode: {
     light: {
       background: '#fff',
+      about: '#F9FAFC',
       Github: '#F9F6F0',
       card: '#F9FAFC',
       text: '#000',
@@ -88,6 +89,7 @@ const customColors = {
     },
     dark: {
       background: '#333533',
+      about: '#766257',
       Github: '#F9F6F0',
       card: '#766257',
       text: '#fff',

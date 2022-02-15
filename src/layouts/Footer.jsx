@@ -11,7 +11,7 @@ const iconProps = {
 
 const useStyles = makeStyles((theme) => ({
   iconBox: {
-    marginTop: theme.spacing(5),
+    marginTop: theme.spacing(2),
   },
   icons: {
     padding: theme.spacing(3),

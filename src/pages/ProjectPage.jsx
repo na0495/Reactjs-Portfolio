@@ -1,35 +1,50 @@
-import React from 'react';
-import Particles from '../components/Animation/Particles'
-import { Link } from 'react-router-dom';
-import { Heading, Text} from '@chakra-ui/layout';
-import { makeStyles } from '@material-ui/core';
+import React, { useRef } from 'react'
+import { Box, useColorModeValue, useColorMode } from '@chakra-ui/react'
+import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import styles from './styles.module.css'
+import { Posts } from '../components/projects/Posts'
 
-const useStyles = makeStyles((theme) => ({
-    title: {
-        justifyContent: 'center',
-        alignContent: 'center',
-        display: 'flex',
-    },
-    root: {
-        paddingTop: 10,
-        paddingBottom: 150,
+const Page = ({ offset, gradient, onClick, bg, mode }) => {
+  return (
+    <>
+      <ParallaxLayer offset={offset} speed={0.2} onClick={onClick}>
+        <Box bg={bg} className={styles.slopeBegin} />
+      </ParallaxLayer>
+
+      <ParallaxLayer offset={offset} speed={0.6} onClick={onClick}>
+        <div className={`${styles.slopeEnd} ${styles[gradient]}`} />
+      </ParallaxLayer>
+
+      <ParallaxLayer className={`${styles.text} ${styles.number}`} offset={offset} speed={0.3}>
+        <span>0{offset + 1}</span>
+      </ParallaxLayer>
+
+      <ParallaxLayer offset={offset} speed={0.3} onClick={onClick}>
+        <Posts />
+      </ParallaxLayer>
+    </>
+  )
+}
+
+export default function App() {
+  const parallax = useRef(null)
+  // get the current color mode light or dark
+  const { colorMode } = useColorMode()
+
+
+
+  const scroll = (to) => {
+    if (parallax.current) {
+      parallax.current.scrollTo(to)
     }
-}));
-
-const NotFound = () => {
-    const classes = useStyles();
-    return (
-    <Particles>
-    <div className={classes.root}>
-        <Heading as="h1" size="2xl" className={classes.title} isTruncated p={4} mt={250} >
-            Comming Soon ! 
-        </Heading>
-        <Link to="/" className={classes.title} mb={100} mt={25}>
-            <Text fontSize="3xl" color="orange"> Go Home </Text>
-        </Link>
+  }
+  return (
+    <div style={{ background: '#dfdfdf' }}>
+      <Parallax className={styles.container} ref={parallax} pages={3} horizontal>
+        <Page offset={0} gradient={colorMode === 'light' ? "lightGreen" : "darkGreen" } bg={useColorModeValue('#C1DEAE', '#519259')} onClick={() => scroll(1)} />
+        <Page offset={1} gradient={colorMode === 'light' ? "lightCreme" : "darkCreme" } bg={useColorModeValue('#DBD0C0', '#B68973')}  onClick={() => scroll(2)} />
+        <Page offset={2} gradient="tomato" onClick={() => scroll(0)} />
+      </Parallax>
     </div>
-    </Particles>
-    );
-};
-
-export default NotFound;
+  )
+}
