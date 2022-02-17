@@ -35,6 +35,10 @@ npm run test
 
 ## Author
 
+<a href = "https://github.com/Tanu-N-Prabhu/Python/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo=na0495/mario-with-js"/>
+</a>
+
 👤 **na0495**
 
 * Website: https://mrabet-saad.netlify.app/
@@ -45,6 +49,3 @@ npm run test
 ## Show your support
 
 Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
