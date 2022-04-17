@@ -2,7 +2,7 @@ import React from "react";
 import {
   BrandGithub,
   BrandLinkedin,
-  BrandeTwitter,
+  BrandTwitter,
   Mail,
 } from "tabler-icons-react";
 
@@ -15,25 +15,25 @@ const siteConfig = {
         url: "https://github.com/na0495/",
         label: "Github Account",
         type: "gray",
-        icon: <BrandGithub />,
+        icon: BrandGithub,
       },
       {
         url: "https://twitter.com/na0495",
         label: "Twitter Account",
         type: "twitter",
-        icon: <BrandeTwitter />,
+        icon: BrandTwitter,
       },
       {
         url: "https://www.linkedin.com/in/saad-mrabet-978a01188/",
         label: "LinkedIn Account",
         type: "linkedin",
-        icon: <BrandLinkedin />,
+        icon: BrandLinkedin,
       },
       {
         url: "mailto:saadmrabet008@gmail.com",
         label: "Mail saad",
         type: "gray",
-        icon: <Mail />,
+        icon: Mail,
       },
     ],
   },

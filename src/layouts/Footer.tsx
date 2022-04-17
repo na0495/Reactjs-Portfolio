@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Stack,
   IconButton,
@@ -10,24 +9,15 @@ import {
 } from "@chakra-ui/react";
 import siteConfig from "../configs/site-config";
 
+// ------------------------------------------------------------
+
 const iconProps = {
   variant: "ghost",
   size: "lg",
   isRound: true,
 };
 
-const useStyles = makeStyles((theme) => ({
-  iconBox: {
-    marginTop: theme.spacing(2),
-  },
-  icons: {
-    padding: theme.spacing(3),
-    fontSize: "2rem",
-  },
-}));
-
-const Footer = (props) => {
-  const classes = useStyles();
+const Footer = (props: any) => {
   const colorMode = useColorMode();
   return (
     <>
@@ -40,22 +30,24 @@ const Footer = (props) => {
         alignItems="center"
         {...props}
       >
-        <Box
-          backgroundColor={`mode.${colorMode}.nav`}
-          className={classes.iconBox}
-        >
-          {siteConfig.author.accounts.map((sc) => (
+        <Box backgroundColor={`mode.${colorMode}.nav`} mt={25}>
+          {siteConfig.author.accounts.map((sc: any) => (
             <IconButton
-              className={classes.icons}
+              sx={{
+                padding: 5,
+                fontSize: "2rem",
+              }}
               as={Link}
               isExternal
               key={sc.label}
               href={sc.url}
               aria-label={sc.label}
               colorScheme={sc.type}
-              icon={sc.icon}
+              // icon={sc.icon}
               {...iconProps}
-            />
+            >
+              {sc.icon}
+            </IconButton>
           ))}
         </Box>
       </Stack>

@@ -13,8 +13,7 @@ function App() {
       <Fragment>
         <ScrollToTop />
         <Navbar />
-        {/* <MainRouter/> */}
-        {/* <Footer/> */}
+        <MainRouter />
       </Fragment>
     </Router>
   );

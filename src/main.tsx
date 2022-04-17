@@ -9,8 +9,8 @@ import Seo from "./components/Seo";
 
 // ------------------------------------------------------------
 
-const container = document.getElementById('root');
-const root = createRoot(container!)
+const container = document.getElementById("root");
+const root = createRoot(container!);
 
 root.render(
   <ChakraProvider theme={customTheme}>

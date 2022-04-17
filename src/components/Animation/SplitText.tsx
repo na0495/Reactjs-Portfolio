@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 
-export function SplitText({ children, ...rest }) {
-  let words = children.split(" ");
+// ------------------------------------------------
+
+type SplitTextProps = {
+  children: any;
+};
+
+export function SplitText({ children, ...rest }: SplitTextProps) {
+  let words: [] = children.split(" ");
   return words.map((word, i) => {
     return (
       <div
