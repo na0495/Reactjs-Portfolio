@@ -1,14 +1,18 @@
-FROM node:14-alpine AS development
+FROM node:15.12.0 AS development
+
 ENV NODE_ENV development
 # Add a work directory
-WORKDIR /portfolio
+WORKDIR /app
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 # Cache and Install dependencies
 COPY package.json .
-COPY package-lock.json .
-RUN npm install
+COPY yarn.lock .
+RUN yarn install
 # Copy app files
 COPY . .
 # Expose port
-EXPOSE 4000
+EXPOSE 3000
 # Start the app
-CMD [ "npm", "start" ]
+CMD [ "yarn", "preview" ]

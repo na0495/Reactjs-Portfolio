@@ -1,27 +1,25 @@
-import React from 'react';
-import { AnimatePresence, motion } from 'framer-motion'
+import React from "react";
+import { AnimatePresence, motion } from "framer-motion";
 // chakra-ui
 import {
   Box,
   IconButton,
   useColorModeValue,
   useColorMode,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 // icons
-import { FiSun } from 'react-icons/fi';
-import { FaMoon } from 'react-icons/fa';
+import { Sun, MoonStars } from "tabler-icons-react";
 // sound effects
 import useSound from "use-sound";
 import lightswitch from "../assets/audios/lightswitch.mp3";
 
-
 const iconProps = {
-  variant: 'ghost',
-  size: 'lg',
-  isRound: true
+  variant: "ghost",
+  size: "lg",
+  isRound: true,
 };
 
-const SwitchMode = props => {
+const SwitchMode = (props) => {
   // define color mode & toggle to light / dark mode
   const { colorMode, toggleColorMode } = useColorMode();
   const text = useColorModeValue("dark", "light");
@@ -31,8 +29,8 @@ const SwitchMode = props => {
     volume: 0.1,
     sprite: {
       on: [0, 300],
-      off: [500, 300]
-    }
+      off: [500, 300],
+    },
   });
 
   const handleClick = () => {
@@ -40,12 +38,11 @@ const SwitchMode = props => {
     toggleColorMode();
   };
 
-
   return (
     <AnimatePresence exitBeforeEnter initial={false}>
       <motion.div
-        style={{ display: 'inline-block' }}
-        key={useColorModeValue('light', 'dark')}
+        style={{ display: "inline-block" }}
+        key={useColorModeValue("light", "dark")}
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 20, opacity: 0 }}
@@ -53,19 +50,20 @@ const SwitchMode = props => {
       >
         <Box
           p={4}
-          sx={{ position: '-webkit-sticky', 
-          // eslint-disable-next-line
-          position: 'sticky', 
-          top: '0',
-          textAlign: 'right',
-          zIndex: 3,
-        }}
+          sx={{
+            position: "-webkit-sticky",
+            // eslint-disable-next-line
+            position: "sticky",
+            top: "0",
+            textAlign: "right",
+            zIndex: 3,
+          }}
         >
           <IconButton
             boxShadow="dark-lg"
             aria-label="Color Mode"
             onClick={handleClick}
-            icon={colorMode === 'light' ? <FaMoon /> : <FiSun />}
+            icon={colorMode === "light" ? <MoonStars /> : <Sun />}
             // onClick={toggleColorMode}
             size="lg"
             isRound={true}

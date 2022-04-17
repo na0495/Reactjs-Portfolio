@@ -9,7 +9,7 @@ import {
   Tag,
   Icon,
   Flex,
-  Tooltip
+  Tooltip,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { getTagColor } from "../../theme/tag";
@@ -17,17 +17,11 @@ import { BiGitRepoForked, BiStar } from "react-icons/bi";
 import { FiGithub } from "react-icons/fi";
 
 const RepositoryCard = (props) => {
-  const {
-    title,
-    description,
-    language,
-    url,
-    stargazers_count,
-    forks_count,
-  } = props;
+  const { title, description, language, url, stargazers_count, forks_count } =
+    props;
   const { colorMode } = useColorMode();
 
-  const handleLinkClick = (e,link) => {
+  const handleLinkClick = (e, link) => {
     window.open(link);
     e.stopPropagation();
   };
@@ -47,7 +41,7 @@ const RepositoryCard = (props) => {
         borderColor={useColorModeValue("gray.100", "gray.700")}
         _hover={{
           shadow: "lg",
-          textDecoration: "none"
+          textDecoration: "none",
         }}
       >
         <VStack overflow="hidden" align="start" spacing={1}>
@@ -55,7 +49,7 @@ const RepositoryCard = (props) => {
             <Flex
               justifyContent={"space-between"}
               width="100%"
-              onClick={e => handleLinkClick(e, url)}
+              onClick={(e) => handleLinkClick(e, url)}
             >
               <Tooltip hasArrow label="Github link" placement="top">
                 <HStack cursor={"pointer"}>
@@ -71,7 +65,10 @@ const RepositoryCard = (props) => {
                   </Text>
                 </HStack>
               </Tooltip>
-              <HStack cursor={"pointer"} onClick={e => handleLinkClick(e, url)}>
+              <HStack
+                cursor={"pointer"}
+                onClick={(e) => handleLinkClick(e, url)}
+              >
                 {forks_count && (
                   <Box _hover={{ color: "blue.500" }}>
                     <Icon as={BiGitRepoForked} boxSize="1.2em" mt={"1px"} />

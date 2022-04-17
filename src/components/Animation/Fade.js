@@ -1,26 +1,36 @@
-import React, { useState } from 'react'
-import { useSpring, animated } from '@react-spring/web'
+import React, { useState } from "react";
+import { useSpring, animated } from "@react-spring/web";
 
-import styles from './styles.module.css'
+import styles from "./styles.module.css";
 
-const AnimFeTurbulence = animated('feTurbulence')
-const AnimFeDisplacementMap = animated('feDisplacementMap')
+const AnimFeTurbulence = animated("feTurbulence");
+const AnimFeDisplacementMap = animated("feDisplacementMap");
 
 export default function Fade() {
-  const [open, toggle] = useState(false)
+  const [open, toggle] = useState(false);
   const { freq, factor, scale, opacity } = useSpring({
     reverse: open,
-    from: { factor: 10, opacity: 0, scale: 0.9, freq: '0.0175, 0.0' },
-    to: { factor: 150, opacity: 1, scale: 1, freq: '0.0, 0.0' },
+    from: { factor: 10, opacity: 0, scale: 0.9, freq: "0.0175, 0.0" },
+    to: { factor: 150, opacity: 1, scale: 1, freq: "0.0, 0.0" },
     config: { duration: 3000 },
-  })
+  });
 
   return (
     <div className={styles.container} onClick={() => toggle(!open)}>
-      <animated.svg className={styles.svg} style={{ scale, opacity }} viewBox="0 0 1278 446">
+      <animated.svg
+        className={styles.svg}
+        style={{ scale, opacity }}
+        viewBox="0 0 1278 446"
+      >
         <defs>
           <filter id="water">
-            <AnimFeTurbulence type="fractalNoise" baseFrequency={freq} numOctaves="2" result="TURB" seed="8" />
+            <AnimFeTurbulence
+              type="fractalNoise"
+              baseFrequency={freq}
+              numOctaves="2"
+              result="TURB"
+              seed="8"
+            />
             <AnimFeDisplacementMap
               xChannelSelector="R"
               yChannelSelector="G"
@@ -39,5 +49,5 @@ export default function Fade() {
         </g>
       </animated.svg>
     </div>
-  )
+  );
 }

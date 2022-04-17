@@ -1,8 +1,15 @@
-import { useRef, useState } from 'react';
+import { useRef, useState } from "react";
 // material
-import { Box, MenuItem, ListItemIcon, ListItemText, Button, Popover } from '@material-ui/core';
+import {
+  Box,
+  MenuItem,
+  ListItemIcon,
+  ListItemText,
+  Button,
+  Popover,
+} from "@material-ui/core";
 // hooks
-import useLocales from '../hooks/useLocales';
+import useLocales from "../hooks/useLocales";
 
 // ----------------------------------------------------------------------
 
@@ -38,7 +45,12 @@ export default function LanguagePopover() {
         <img src={currentLang.icon} alt={currentLang.label} />
       </Button>
 
-      <Popover open={open} onClose={handleClose} anchorEl={anchorRef.current} sx={{ py: 1 }}>
+      <Popover
+        open={open}
+        onClose={handleClose}
+        anchorEl={anchorRef.current}
+        sx={{ py: 1 }}
+      >
         {allLang.map((option) => (
           <MenuItem
             key={option.value}
@@ -49,7 +61,9 @@ export default function LanguagePopover() {
             <ListItemIcon>
               <Box component="img" alt={option.label} src={option.icon} />
             </ListItemIcon>
-            <ListItemText primaryTypographyProps={{ variant: 'body2' }}>{option.label}</ListItemText>
+            <ListItemText primaryTypographyProps={{ variant: "body2" }}>
+              {option.label}
+            </ListItemText>
           </MenuItem>
         ))}
       </Popover>

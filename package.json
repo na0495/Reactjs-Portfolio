@@ -1,80 +1,55 @@
 {
-  "name": "myprotofil",
-  "version": "0.1.0",
+  "name": "napotfolio",
+  "author": "na0495",
+  "version": "1.1.0",
   "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "debug": "vite --debug",
+    "preview": "yarn build && vite preview --host --port=3000",
+    "format": "prettier --write '**/*.{ts,tsx,js,jsx,json,md,mdx}'",
+    "dev:up": "docker-compose -f docker-compose.yml up",
+    "dev:build": "docker-compose -f docker-compose.yml up --build"
+  },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.13",
-    "@chakra-ui/react": "^1.6.4",
+    "@chakra-ui/react": "^1.8.8",
     "@react-spring/parallax": "^9.4.2",
-    "@react-three/drei": "^8.7.3",
-    "@react-three/fiber": "^7.0.25",
-    "three": "^0.137.2",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
-    "@material-ui/core": "^4.11.4",
-    "@material-ui/styles": "^4.11.4",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.4",
     "framer-motion": "^4.1.17",
-    "http2": "^3.3.7",
-    "i18next": "^21.5.4",
-    "i18next-browser-languagedetector": "^6.1.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "i18next": "^21.6.16",
+    "i18next-browser-languagedetector": "^6.1.4",
+    "prettier": "^2.6.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-helmet-async": "^1.3.0",
+    "react-i18next": "^11.16.6",
+    "react-router-dom": "^6.3.0",
+    "tabler-icons-react": "^1.45.0",
+    "vite-svg-loader": "^3.2.0",
     "react-github-calendar": "^2.0.2",
     "react-helmet": "^6.1.0",
-    "react-i18next": "^11.14.3",
-    "react-icons": "^4.2.0",
     "react-intersection-observer": "^8.32.0",
-    "react-particles-js": "^3.4.1",
     "react-reveal": "^1.2.2",
-    "react-router-dom": "^6.2.1",
     "react-scripts": "4.0.3",
     "react-seo-component": "^2.0.2",
-    "react-awesome-loaders": "^0.1.37",
     "react-spring": "^9.2.3",
     "react-stack-grid": "^0.7.1",
     "react-vertical-timeline-component": "^3.3.3",
-    "react-wavify": "^1.5.2",
     "typewriter-effect": "^2.18.0",
-    "use-http": "^1.0.24",
-    "use-sound": "^4.0.1",
-    "web-vitals": "^1.1.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "dev": "docker-compose up"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "use-http": "^1.0.26",
+    "use-sound": "^4.0.1"
   },
   "devDependencies": {
-    "@iconify-icons/cil": "^1.1.0",
-    "@iconify-icons/fa-brands": "^1.1.0",
-    "@iconify-icons/fluent": "^1.1.22",
-    "@iconify-icons/ic": "^1.1.7",
-    "@iconify-icons/icon-park": "^1.1.0",
-    "@iconify/react": "^1.1.4",
-    "json-loader": "^0.5.7"
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "typescript": "^4.6.3",
+    "prettier": "2.5.1",
+    "vite": "^2.9.2"
   }
 }

@@ -1,19 +1,19 @@
 {
-    "hello": {
-        "hello": "Hello there"
-    },
-    "type": {
-        "software_developer": "Softwareentwickler",
-        "full_stack": "Full-Stack-Entwickler",
-        "open_source": "Open-Source-Mitwirkender"
-    },
-    "Nav": {
-        "home": "Home",
-        "aboutme": "About me",
-        "skill": "Skills",
-        "resume": "Resume",
-        "openSource": "Open Source",
-        "projects": "Projects",
-        "singelpage": "Singel page"
-    }
+  "hello": {
+    "hello": "Hello there"
+  },
+  "type": {
+    "software_developer": "Softwareentwickler",
+    "full_stack": "Full-Stack-Entwickler",
+    "open_source": "Open-Source-Mitwirkender"
+  },
+  "Nav": {
+    "home": "Home",
+    "aboutme": "About me",
+    "skill": "Skills",
+    "resume": "Resume",
+    "openSource": "Open Source",
+    "projects": "Projects",
+    "singelpage": "Singel page"
+  }
 }

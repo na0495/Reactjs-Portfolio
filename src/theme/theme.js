@@ -1,21 +1,21 @@
-import { theme } from '@chakra-ui/react';
-import customIcons from './IconPaths';
-import customColors from './CustomColors';
+import { theme } from "@chakra-ui/react";
+// import customIcons from './IconPaths';
+import customColors from "./CustomColors";
 
 const customTheme = {
   ...theme,
   icons: {
     ...theme.icons,
-    ...customIcons
+    // ...customIcons
   },
   colors: {
     ...theme.colors,
-    ...customColors
+    ...customColors,
   },
   fonts: {
-    body: 'Inter var, sans-serif',
-    heading: 'Inter var, sans-serif',
-    mono: 'Fira Code, monospace'
+    body: "Inter var, sans-serif",
+    heading: "Inter var, sans-serif",
+    mono: "Fira Code, monospace",
   },
   // fontSizes: {
   //   xs: '12px',
@@ -59,22 +59,22 @@ const customTheme = {
   // },
   // breakpoints: ['30em', '48em', '62em', '80em'],
   space: {
-    '0': '0',
-    '1': '0.125rem',
-    '2': '0.25rem',
-    '3': '0.5rem',
-    '4': '1rem',
-    '5': '1.5rem',
-    '6': '2rem',
-    '8': '2.5em',
-    '10': '3rem',
-    '11': '3.5rem',
-    '12': '4rem',
-    '16': '6rem',
-    '20': '8rem',
-    '24': '11rem',
-    '32': '16rem'
-  }
+    0: "0",
+    1: "0.125rem",
+    2: "0.25rem",
+    3: "0.5rem",
+    4: "1rem",
+    5: "1.5rem",
+    6: "2rem",
+    8: "2.5em",
+    10: "3rem",
+    11: "3.5rem",
+    12: "4rem",
+    16: "6rem",
+    20: "8rem",
+    24: "11rem",
+    32: "16rem",
+  },
 };
 
 export default customTheme;

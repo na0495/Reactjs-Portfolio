@@ -1,17 +1,17 @@
 {
-    "hello": "Hallo",
-    "type": {
-        "software_developer": "Softwareentwickler",
-        "full_stack": "Full-Stack-Entwickler",
-        "open_source": "Open-Source-Mitwirkender"
-    },
-    "Nav": {
-        "home": "Home",
-        "aboutme": "Über mich",
-        "skill": "Fähigkeiten",
-        "resume": "Resume",
-        "openSource": "Open Source",
-        "projects": "Projekte",
-        "singelpage": "Singelpage"
-    }
+  "hello": "Hallo",
+  "type": {
+    "software_developer": "Softwareentwickler",
+    "full_stack": "Full-Stack-Entwickler",
+    "open_source": "Open-Source-Mitwirkender"
+  },
+  "Nav": {
+    "home": "Home",
+    "aboutme": "Über mich",
+    "skill": "Fähigkeiten",
+    "resume": "Resume",
+    "openSource": "Open Source",
+    "projects": "Projekte",
+    "singelpage": "Singelpage"
+  }
 }

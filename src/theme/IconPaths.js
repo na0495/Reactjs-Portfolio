@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const iconPaths = {
   Logo: {
@@ -368,6 +368,6 @@ const iconPaths = {
     ),
     viewBox: "0 0 18 14",
   },
-}
+};
 
-export default iconPaths
+export default iconPaths;

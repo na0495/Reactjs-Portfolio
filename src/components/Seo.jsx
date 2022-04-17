@@ -1,5 +1,5 @@
-import SEO from 'react-seo-component';
-import seo from '../_mock/seo.json';
+import SEO from "react-seo-component";
+import seo from "../_mock/seo.json";
 
 export default function Seo() {
   return (
@@ -16,5 +16,5 @@ export default function Seo() {
         twitterUsername={seo.twitterUsername}
       />
     </>
-  )
+  );
 }
