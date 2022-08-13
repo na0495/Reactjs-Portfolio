@@ -51,9 +51,9 @@ const SwitchMode = (props) => {
         <Box
           p={4}
           sx={{
-            position: "-webkit-sticky",
-            // eslint-disable-next-line
-            position: "sticky",
+            // position: "-webkit-sticky",
+            // // eslint-disable-next-line
+            // position: "sticky",
             top: "0",
             textAlign: "right",
             zIndex: 3,
